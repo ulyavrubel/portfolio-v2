@@ -1,0 +1,30 @@
+.navigation {
+  padding: 4.8rem 6.4rem;
+
+  &__list {
+    list-style: none;
+    text-align: end;
+  }
+
+  &__item {
+    display: inline-block;
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 2rem;
+      color: $color-gray-dark;
+    }
+
+    &:hover {
+      color: $color-primary-blue;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/index.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ulyavrubel/portfolio-v2.git"
+  },
+  "author": "Ulyana Sichkar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ulyavrubel/portfolio-v2/issues"
+  },
+  "homepage": "https://github.com/ulyavrubel/portfolio-v2#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

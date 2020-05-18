@@ -1,0 +1,19 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $color-gray-dark;
+}
+
+.heading-primary {
+  font-size: 6.4rem;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  color: $color-gray-light;
+}
+
+.heading-tertiary {
+  font-size: 3.6rem;
+  margin-top: 3.2rem;
+}
