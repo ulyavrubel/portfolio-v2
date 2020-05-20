@@ -1,6 +1,68 @@
 .container {
-  height: calc(100vh - 12rem - 4.8rem);
+  height: calc(100vh - 7.2rem - 4.8rem);
   padding: 6.4rem;
+  padding-top: 12.8rem;
   display: flex;
   flex-direction: row;
+  // align-items: center;
+}
+
+.header {
+  width: 50vw;
+}
+
+.projects {
+  width: 50vw;
+  padding-left: 19.2rem;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: block;
+      font-size: 3rem;
+      font-weight: 600;
+      color: $color-gray-dark;
+      transition: all 0.4s;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+    &:hover {
+      margin-left: 2.4rem;
+      color: $color-primary-blue;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    z-index: -1;
+    bottom: 2rem;
+    height: 70vh;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+
+    &--musicdb-1 {
+      left: -30vw;
+    }
+
+    &--musicdb-2 {
+      left: 130vw;
+    }
+  }
+
+  &__link--musicdb:hover + &__img--musicdb-1 {
+    opacity: 0.2;
+    left: 40vw;
+  }
+  &__link--musicdb:hover ~ &__img--musicdb-2 {
+    opacity: 0.2;
+    left: 75vw;
+  }
 }

@@ -30,6 +30,7 @@
   }
 
   &__icon {
+    transition: all 0.3s;
     &:hover {
       filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg)
         brightness(99%) contrast(116%);

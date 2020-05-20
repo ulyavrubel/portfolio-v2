@@ -30,6 +30,11 @@ body {
   font-size: 3.6rem;
   margin-top: 3.2rem; }
 
+.heading-projects {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+  color: #828181; }
+
 .gradient-box {
   display: inline-block;
   position: relative;
@@ -57,10 +62,11 @@ body {
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   color: #211df4;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  transition: all 0.3s; }
 
 .navigation {
-  padding: 4.8rem 6.4rem; }
+  padding: 4.8rem 6.4rem 0 6.4rem; }
   .navigation__list {
     list-style: none;
     text-align: end; }
@@ -71,7 +77,8 @@ body {
   .navigation__link, .navigation__link:link, .navigation__link:visited {
     text-decoration: none;
     font-size: 2rem;
-    color: #3c3c3c; }
+    color: #3c3c3c;
+    transition: all 0.2s; }
   .navigation__link:hover {
     color: #211df4;
     font-weight: 600; }
@@ -93,11 +100,52 @@ body {
     font-weight: 500; }
   .footer__icon-link:not(:last-child) {
     margin-right: 1.2rem; }
-  .footer__icon:hover {
-    filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg) brightness(99%) contrast(116%); }
+  .footer__icon {
+    transition: all 0.3s; }
+    .footer__icon:hover {
+      filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg) brightness(99%) contrast(116%); }
 
 .container {
-  height: calc(100vh - 12rem - 4.8rem);
+  height: calc(100vh - 7.2rem - 4.8rem);
   padding: 6.4rem;
+  padding-top: 12.8rem;
   display: flex;
   flex-direction: row; }
+
+.header {
+  width: 50vw; }
+
+.projects {
+  width: 50vw;
+  padding-left: 19.2rem; }
+  .projects__list {
+    list-style: none; }
+  .projects__link, .projects__link:link, .projects__link:visited {
+    text-decoration: none;
+    display: block;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #3c3c3c;
+    transition: all 0.4s; }
+    .projects__link:not(:last-child), .projects__link:link:not(:last-child), .projects__link:visited:not(:last-child) {
+      margin-bottom: 2.4rem; }
+  .projects__link:hover {
+    margin-left: 2.4rem;
+    color: #211df4; }
+  .projects__img {
+    position: absolute;
+    z-index: -1;
+    bottom: 2rem;
+    height: 70vh;
+    opacity: 0;
+    transition: all 0.8s ease-out; }
+    .projects__img--musicdb-1 {
+      left: -30vw; }
+    .projects__img--musicdb-2 {
+      left: 130vw; }
+  .projects__link--musicdb:hover + .projects__img--musicdb-1 {
+    opacity: 0.2;
+    left: 40vw; }
+  .projects__link--musicdb:hover ~ .projects__img--musicdb-2 {
+    opacity: 0.2;
+    left: 75vw; }
