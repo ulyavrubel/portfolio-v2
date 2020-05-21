@@ -27,7 +27,15 @@
   }
 
   &:hover .btn {
-    color: $color-primary-green;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-blue 50%,
+      $color-primary-green
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 

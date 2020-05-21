@@ -38,23 +38,44 @@
       margin-left: 2.4rem;
       color: $color-primary-blue;
     }
+    &--span {
+      display: none;
+      // font-size: 2.4rem;
+      filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg)
+        brightness(99%) contrast(116%);
+    }
   }
 
   &__img {
     position: absolute;
     z-index: -1;
-    bottom: 2rem;
+
     height: 70vh;
     opacity: 0;
     transition: all 0.8s ease-out;
 
     &--musicdb-1 {
       left: -30vw;
+      bottom: 2rem;
     }
 
     &--musicdb-2 {
-      left: 130vw;
+      left: 75vw;
+      bottom: 100vh;
     }
+
+    &--recipe-1 {
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    // &--recipe-2 {
+    //   left: 75vw;
+    //   bottom: 100vh;
+    // }
   }
 
   &__link--musicdb:hover + &__img--musicdb-1 {
@@ -63,6 +84,18 @@
   }
   &__link--musicdb:hover ~ &__img--musicdb-2 {
     opacity: 0.2;
-    left: 75vw;
+    bottom: 2rem;
   }
+
+  &__link--portfolio:hover > &__link--span {
+    display: inline;
+  }
+
+  &__link--recipe:hover + &__img--recipe-1 {
+    opacity: 0.2;
+  }
+  // &__link--recipe:hover ~ &__img--recipe-2 {
+  //   opacity: 0.2;
+  //   bottom: 2rem;
+  // }
 }
