@@ -26,6 +26,22 @@
     );
   }
 
+  &--green:before {
+    background: linear-gradient(
+      to right bottom,
+      $color-primary-green,
+      $color-gray-light
+    );
+  }
+
+  &--blue:before {
+    background: linear-gradient(
+      to right bottom,
+      $color-gray-light,
+      $color-primary-blue
+    );
+  }
+
   &:hover .btn {
     display: inline-block;
     background-image: linear-gradient(
@@ -47,5 +63,13 @@
     color: $color-primary-blue;
     font-size: 1.4rem;
     transition: all 0.3s;
+  }
+
+  &--gray {
+    &,
+    &:link,
+    &:visited {
+      color: $color-gray-dark;
+    }
   }
 }

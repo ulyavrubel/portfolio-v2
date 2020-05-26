@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>MisicDB</title>
+  </head>
+  <body>
+    <div class="mdb-navigation">
+      <a href="/index.html">
+        <div class="mdb-navigation__button">
+          <img
+            src="../img/musicdb/back.svg"
+            alt="arrow back"
+            class="mdb-navigation__img"
+          /></div
+      ></a>
+    </div>
+    <div class="mdb-container">
+      <header class="mdb-header">
+        <div class="mdb-header__left">
+          <img
+            src="../img/musicdb/logo-MusicDB-black.png"
+            alt="logo"
+            class="mdb-header-logo"
+            width="384px"
+          />
+          <h1 class="mdb-heading--primary">Music database</h1>
+          <h2 class="mdb-heading--secondary">built with React and Firebase</h2>
+          <div class="mdb-button-box">
+            <div class="gradient-box gradient-box--green">
+              <a
+                href="https://react-music-db.herokuapp.com/"
+                class="btn btn--gray"
+                target="_blank"
+                >Live</a
+              >
+            </div>
+            <div class="gradient-box gradient-box--blue">
+              <a
+                href="https://github.com/ulyavrubel/music-db"
+                class="btn btn--gray"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="mdb-header__right">
+          <img
+            src="../img/musicdb-mockup-1.png"
+            alt=""
+            class="mdb-header__img"
+          />
+        </div>
+        <img src="../img/musicdb/arrow.svg" alt="" class="mdb-arrow-down" />
+      </header>
+      <div class="mdb-section mdb-section--intro">
+        <div class="mdb-section__left mdb-section__left--intro">
+          <img
+            src="../img/musicdb-mockup-2.png"
+            alt="iphone mockup"
+            class="intro-img"
+          />
+        </div>
+        <div class="mdb-section__right mdb-section__right--intro">
+          <h3 class="mdb-heading--tertiary">Intro</h3>
+          <p class="mdb-section__p">
+            This project is a simplistic clone of Discogs - database of
+            information about music artists, albums, labels, and genres.
+          </p>
+          <p class="mdb-section__p">
+            I have built it with the aim to dive deep into React and make a
+            "real-world" application with authentication and realtime database
+            provided by Firebase.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="mdb-section mdb-section--design">
+      <div class="mdb-section__left mdb-section__left--design">
+        <h3 class="mdb-heading--tertiary mdb-heading--tertiary--white">
+          Design
+        </h3>
+        <p class="mdb-section__p mdb-section__p--white">
+          This is the first project when I decided to start with a design
+          <a href="https://www.figma.com/file/XLVeKdK0KW8umKqldC6f1y/music-db">
+            prototype</a
+          >
+          in Figma. Initially started with main and profile pages I added other
+          pages later with mobile-first concept in mind.
+        </p>
+        <p class="mdb-section__p mdb-section__p--white">
+          Inspired by Adam Wathan's and Steve Schoger's book Refactoring UI I
+          have set a simplified design system for myself, sets of options for
+          font-sizes, colors and sizing scale. That made styling process much
+          easier and as a result more consistent design.
+        </p>
+      </div>
+      <div class="mdb-section__right mdb-section__right--design">
+        <img
+          src="../img/musicdb/signup.png"
+          alt="signup page"
+          class="design-img"
+        />
+      </div>
+    </div>
+    <div class="mdb-section mdb-section--stack">
+      <div class="mdb-section__left mdb-section__left--stack">
+        <h3 class="mdb-heading--tertiary">
+          REACT + FIREBASE
+        </h3>
+        <div class="mdb-section__p">
+          After learning the basics of React I wanted to make something more
+          comprehensive than a todo list. As for now my backend knowledge is
+          very limited, I chose Firebase for managing all backend work.
+        </div>
+        <div class="mdb-section__p">
+          The application uses Firebase authentication system, Cloud Firestore
+          for database and Firebase Storage for image uploads.
+        </div>
+      </div>
+      <div class="mdb-section__right mdb-section__right--stack">
+        <h3 class="mdb-heading--tertiary">
+          SASS
+        </h3>
+        <div class="mdb-section__p">
+          Originally built without preprocessor after attending Advanced CSS and
+          SASS course by Jonas Schmedtmann I decided to refactor vanilla CSS
+          into Sass.
+        </div>
+        <div class="mdb-section__p">
+          Renaming classes into BEM format, adding utility classes, mixins and
+          variables were a ton of a work but all of that made code much cleaner
+          and more structured.
+        </div>
+      </div>
+    </div>
+    <div class="mdb-section mdb-section--schema">
+      <h3 class="mdb-heading--tertiary">
+        Database schema
+      </h3>
+      <img
+        src="../img/musicdb/schema.png"
+        alt="database schema"
+        class="schema-img"
+      />
+    </div>
+    <div class="mdb-section mdb-section--features">
+      <h3 class="mdb-heading--tertiary mdb-heading--tertiary--white">
+        features
+      </h3>
+      <div class="mdb-section__left mdb-section__left--features">
+        <p class="mdb-section__p mdb-section__p--white">
+          for unauthenticated users:
+        </p>
+        <ul>
+          <li>view recently added albums</li>
+          <li>view album page</li>
+          <li>search through database</li>
+        </ul>
+      </div>
+      <div class="mdb-section__right mdb-section__right--features">
+        <p class="mdb-section__p mdb-section__p--white">
+          for authenticated users only:
+        </p>
+        <ul>
+          <li>add/remove an album to/from collection and wishlist</li>
+          <li>switch between grid/row view for collection and wishlist</li>
+          <li>
+            sort albums by date added to database, artist, album, genre, release
+            year
+          </li>
+          <li>upload new album to the database</li>
+          <li>view all albums uploaded by the current user</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
