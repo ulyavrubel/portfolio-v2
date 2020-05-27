@@ -11,6 +11,8 @@
     width: 50vw;
     align-self: center;
     margin-left: 19.2rem;
+    align-self: flex-end;
+    padding-bottom: 12.8rem;
   }
 
   &__right {
@@ -23,15 +25,19 @@
     height: 100vh;
   }
 }
+.mdb-button-box {
+  margin-top: 3.2rem;
+}
 
 .mdb-navigation {
   position: relative;
 
   &__button {
-    position: absolute;
-    left: 6.4rem;
+    position: fixed;
+    z-index: 10;
+    left: 4.8rem;
     top: 6.4rem;
-    background-color: $color-gray-dark;
+    background-color: $color-gray-dark-2;
     width: 6.4rem;
     height: 6.4rem;
     border-radius: 50%;
@@ -104,6 +110,36 @@
     display: block;
     text-align: center;
   }
+
+  &--features {
+    background-image: url(../img/musicdb/polygon3.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-items: flex-start;
+    padding-bottom: 12.8rem;
+  }
+
+  &__left--features,
+  &__right--features {
+    padding: 0 6.4rem;
+    margin-top: 9.6rem;
+  }
+  &__left--features {
+    width: 35vw;
+  }
+
+  &--video {
+    display: block;
+    text-align: center;
+  }
+
+  &--footer {
+    align-items: flex-start;
+  }
+
+  &__right--footer {
+    text-align: right;
+  }
 }
 
 .intro-img {
@@ -118,4 +154,8 @@
 .schema-img {
   margin-top: 6.4rem;
   width: 60%;
+}
+
+.mdb-video {
+  max-width: 100rem;
 }

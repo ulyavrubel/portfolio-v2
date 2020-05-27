@@ -7,6 +7,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&subset=latin-ext"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../css/style.css" />
     <title>MisicDB</title>
   </head>
@@ -28,27 +32,24 @@
             src="../img/musicdb/logo-MusicDB-black.png"
             alt="logo"
             class="mdb-header-logo"
-            width="384px"
+            width="256px"
           />
           <h1 class="mdb-heading--primary">Music database</h1>
           <h2 class="mdb-heading--secondary">built with React and Firebase</h2>
           <div class="mdb-button-box">
-            <div class="gradient-box gradient-box--green">
-              <a
-                href="https://react-music-db.herokuapp.com/"
-                class="btn btn--gray"
-                target="_blank"
-                >Live</a
-              >
-            </div>
-            <div class="gradient-box gradient-box--blue">
-              <a
-                href="https://github.com/ulyavrubel/music-db"
-                class="btn btn--gray"
-                target="_blank"
-                >GitHub</a
-              >
-            </div>
+            <a
+              href="https://react-music-db.herokuapp.com/"
+              class="btn btn--mdb"
+              target="_blank"
+              >Live</a
+            >
+
+            <a
+              href="https://github.com/ulyavrubel/music-db"
+              class="btn btn--mdb"
+              target="_blank"
+              >GitHub</a
+            >
           </div>
         </div>
 
@@ -152,25 +153,29 @@
         class="schema-img"
       />
     </div>
+
     <div class="mdb-section mdb-section--features">
-      <h3 class="mdb-heading--tertiary mdb-heading--tertiary--white">
-        features
-      </h3>
       <div class="mdb-section__left mdb-section__left--features">
+        <h3 class="mdb-heading--tertiary mdb-heading--tertiary--white">
+          features
+        </h3>
         <p class="mdb-section__p mdb-section__p--white">
           for unauthenticated users:
         </p>
-        <ul>
+        <ul class="mdb-section__p mdb-section__p--white mdb-section__ul">
           <li>view recently added albums</li>
           <li>view album page</li>
           <li>search through database</li>
         </ul>
       </div>
       <div class="mdb-section__right mdb-section__right--features">
+        <h3 class="mdb-heading--tertiary mdb-heading--tertiary--white">
+          &nbsp;
+        </h3>
         <p class="mdb-section__p mdb-section__p--white">
           for authenticated users only:
         </p>
-        <ul>
+        <ul class="mdb-section__p mdb-section__p--white mdb-section__ul">
           <li>add/remove an album to/from collection and wishlist</li>
           <li>switch between grid/row view for collection and wishlist</li>
           <li>
@@ -179,8 +184,82 @@
           </li>
           <li>upload new album to the database</li>
           <li>view all albums uploaded by the current user</li>
+          <li>view user's activity for the last month</li>
         </ul>
       </div>
     </div>
+    <div class="mdb-section mdb-section--video">
+      <video class="mdb-video" controls>
+        <source src="../img/musicdb/MusicDB.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <footer class="mdb-footer">
+      <div class="mdb-section mdb-section--footer">
+        <div class="mdb-section__left">
+          <h4 class="mdb-heading--tertiary mdb-heading--tertiary--white">
+            Next project
+          </h4>
+          <ul class="mdb-footer__list">
+            <li>
+              <a href="#" class="mdb-footer__link">Personal Portfolio</a>
+            </li>
+            <li>
+              <a href="#" class="mdb-footer__link">Recipe Generator</a>
+            </li>
+            <li>
+              <a href="#" class="mdb-footer__link">API & Microservices</a>
+            </li>
+          </ul>
+          <div class="footer__icons">
+            <a href="https://github.com/ulyavrubel" class="footer__icon-link">
+              <img
+                src="../img/github.svg"
+                class="footer__icon footer__icon--white"
+                width="24px"
+                alt="github
+                      icon"
+            /></a>
+            <a href="https://twitter.com/ulyanas19" class="footer__icon-link">
+              <img
+                src="../img/twitter.svg"
+                class="footer__icon footer__icon--white"
+                width="24px"
+                alt="github icon"
+            /></a>
+            <a
+              href="www.linkedin.com/in/ulyana-sichkar-80432126"
+              class="footer__icon-link"
+            >
+              <img
+                src="../img/linkedin.svg"
+                class="footer__icon footer__icon--white"
+                width="24px"
+                alt="github icon"
+            /></a>
+          </div>
+        </div>
+        <div class="mdb-section__right mdb-section__right--footer">
+          <!-- <h4 class="mdb-heading--tertiary mdb-heading--tertiary--white">
+            Navigation
+          </h4> -->
+          <ul class="mdb-footer__list mdb-footer__list--nav">
+            <li class="mdb-footer__navigation-item">
+              <a href="/" class="mdb-footer__navigation-link">Home</a>
+            </li>
+            <li class="mdb-footer__navigation-item">
+              <a href="/" class="mdb-footer__navigation-link">About me</a>
+            </li>
+            <li class="mdb-footer__navigation-item">
+              <a href="/" class="mdb-footer__navigation-link">Contacts</a>
+            </li>
+            <li class="mdb-footer__navigation-item">
+              <a href="/" class="mdb-footer__navigation-link">CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
