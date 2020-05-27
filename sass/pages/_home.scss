@@ -1,10 +1,9 @@
 .container {
   height: calc(100vh - 7.2rem - 4.8rem);
   padding: 6.4rem;
-  padding-top: 12.8rem;
   display: flex;
   flex-direction: row;
-  // align-items: center;
+  align-items: center;
 }
 
 .header {

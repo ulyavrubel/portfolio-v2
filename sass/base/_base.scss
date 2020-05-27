@@ -8,6 +8,18 @@
 
 html {
   font-size: 62.5%; //1 rem = 10px 10/16 = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.5%; //1rem = 9px, 9/16 = 56.5%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px, 12/16 = 75%
+  }
 }
 
 body {
@@ -15,4 +27,14 @@ body {
   height: 100vh;
   /* border-box - total width or total height will include padding and border */
   box-sizing: border-box;
+}
+
+.mobile {
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  @include respond(tab-port) {
+    display: block;
+  }
 }

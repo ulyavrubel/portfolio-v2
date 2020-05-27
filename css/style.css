@@ -1,3 +1,16 @@
+/*
+0 - 600px:  Phone
+600-900px:  Tablet portrait
+900-1200:   Tablet landscape
+1200 -1800: Normal styles
+1800 - :    Big screens
+
+$breakpoint arg choices
+- phone
+- tab-port
+- tab-land
+- big-desctop
+*/
 *,
 *::after,
 *::before {
@@ -7,12 +20,29 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.5%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   widows: 100vw;
   height: 100vh;
   /* border-box - total width or total height will include padding and border */
   box-sizing: border-box; }
+
+@media only screen and (max-width: 75em) {
+  .mobile {
+    display: none; } }
+
+@media only screen and (max-width: 56.25em) {
+  .mobile {
+    display: block; } }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -115,6 +145,10 @@ body {
   border-radius: 2rem;
   transition: all 0.2s;
   position: relative; }
+  @media only screen and (min-width: 112.5em) {
+    .btn--mdb, .btn--mdb:link, .btn--mdb:visited {
+      font-size: 2rem;
+      padding: 1.2rem 3.2rem; } }
 
 .btn--mdb:hover {
   background-color: #555555; }
@@ -155,6 +189,10 @@ body {
     color: #02ff3a; }
   .footer__link:hover {
     font-weight: 500; }
+  @media only screen and (max-width: 37.5em) {
+    .footer__icons {
+      position: absolute;
+      bottom: -30rem; } }
   .footer__icon-link:not(:last-child) {
     margin-right: 1.2rem; }
   .footer__icon {
@@ -172,6 +210,9 @@ body {
       margin-top: 1.2rem; }
     .mdb-footer__list--nav {
       margin-top: 0; }
+      @media only screen and (max-width: 37.5em) {
+        .mdb-footer__list--nav {
+          margin-bottom: 0; } }
   .mdb-footer__link {
     font-size: 1.8rem;
     text-decoration: none;
@@ -192,9 +233,9 @@ body {
 .container {
   height: calc(100vh - 7.2rem - 4.8rem);
   padding: 6.4rem;
-  padding-top: 12.8rem;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  align-items: center; }
 
 .header {
   width: 50vw; }
@@ -252,22 +293,49 @@ body {
   background-image: url(../img/musicdb/polygon1.svg);
   background-repeat: no-repeat;
   background-position: top right; }
+  @media only screen and (min-width: 112.5em) {
+    .mdb-container {
+      background-size: 65%; } }
+  @media only screen and (max-width: 37.5em) {
+    .mdb-container {
+      background-image: none; } }
 
 .mdb-header {
   display: flex;
   flex-direction: row; }
+  @media only screen and (max-width: 37.5em) {
+    .mdb-header {
+      display: block; } }
   .mdb-header__left {
     width: 50vw;
     align-self: center;
     margin-left: 19.2rem;
     align-self: flex-end;
     padding-bottom: 12.8rem; }
+    @media only screen and (min-width: 112.5em) {
+      .mdb-header__left {
+        padding-bottom: 25.6rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-header__left {
+        width: 100vw;
+        margin: 0;
+        padding: 19.2rem 3.2rem 3.2rem 3.2rem;
+        text-align: center; } }
   .mdb-header__right {
-    width: 50vw;
-    text-align: right;
-    margin-right: 12.8rem; }
+    width: 100vw;
+    text-align: center;
+    margin: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-header__right {
+        width: 95vw;
+        margin: 3.2rem auto 0 auto; } }
   .mdb-header__img {
     height: 100vh; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-header__img {
+        width: 80vw;
+        height: auto;
+        margin: 3.2rem auto 0 auto; } }
 
 .mdb-button-box {
   margin-top: 3.2rem; }
@@ -295,67 +363,131 @@ body {
     left: 45%;
     transform: translate(-50%, -50%); }
 
-.mdb-button-box .gradient-box:first-child {
-  margin-right: 1.2rem; }
-
 .mdb-arrow-down {
   position: absolute;
   bottom: 6.4rem;
   left: 6.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .mdb-arrow-down {
+      display: none; } }
 
 .mdb-section {
   padding: 6.4rem;
   display: flex;
   flex-direction: row;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .mdb-section {
+      padding: 6.4rem 4.8rem;
+      display: block; } }
   .mdb-section__left, .mdb-section__right {
     width: 50vw; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__left, .mdb-section__right {
+        width: auto; } }
   .mdb-section__left--intro, .mdb-section__right--intro {
     width: 35vw; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__left--intro, .mdb-section__right--intro {
+        width: auto; } }
   .mdb-section--design {
     margin-top: -12rem;
     background-image: url(../img/musicdb/polygon2.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     height: 90rem; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section--design {
+        margin-top: 0;
+        background-image: url(../img/musicdb/polygon1-mobile.svg);
+        height: auto;
+        padding: 19.2rem 4.8rem 0 4.8rem; } }
   .mdb-section__left--design {
     margin-left: 9.6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__left--design {
+        margin-left: 0; } }
   .mdb-section__right--design {
     text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__right--design {
+        margin-top: 19.2rem; } }
+  @media only screen and (min-width: 112.5em) {
+    .mdb-section--stack {
+      padding: 9.6rem 6.4rem; } }
   .mdb-section__left--stack, .mdb-section__right--stack {
     padding: 0 6.4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__left--stack, .mdb-section__right--stack {
+        padding: 2.4rem 0; } }
   .mdb-section--schema {
     display: block;
     text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section--schema {
+        display: none; } }
   .mdb-section--features {
     background-image: url(../img/musicdb/polygon3.svg);
     background-repeat: no-repeat;
     background-size: 100%;
     align-items: flex-start;
     padding-bottom: 12.8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section--features {
+        background-image: url(../img/musicdb/polygon2-mobile.svg);
+        background-size: auto; } }
   .mdb-section__left--features, .mdb-section__right--features {
     padding: 0 6.4rem;
     margin-top: 9.6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__left--features, .mdb-section__right--features {
+        padding: 0;
+        margin-top: 0; } }
   .mdb-section__left--features {
     width: 35vw; }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section__left--features {
+        width: auto; } }
   .mdb-section--video {
     display: block;
     text-align: center; }
+    @media only screen and (min-width: 112.5em) {
+      .mdb-section--video {
+        padding: 9.6rem 6.4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .mdb-section--video {
+        padding: 6.4rem 0; } }
   .mdb-section--footer {
     align-items: flex-start; }
+  @media only screen and (max-width: 37.5em) {
+    .mdb-section__left--footer {
+      position: relative; } }
   .mdb-section__right--footer {
     text-align: right; }
 
 .intro-img {
   height: 75vh;
   margin-left: 6.4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .intro-img {
+      display: none; } }
 
 .design-img {
   height: 70vh; }
+  @media only screen and (min-width: 112.5em) {
+    .design-img {
+      height: 60vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .design-img {
+      height: 50vh; } }
 
 .schema-img {
   margin-top: 6.4rem;
   width: 60%; }
 
 .mdb-video {
+  width: 80vw;
   max-width: 100rem; }
+  @media only screen and (max-width: 37.5em) {
+    .mdb-video {
+      width: 90vw; } }
