@@ -58,7 +58,14 @@
         <div class="mdb-header__right">
           <img
             src="../img/musicdb-mockup-1.png"
-            alt=""
+            srcset="
+              ../img/musicdb-mockup-1-s.png  200w,
+              ../img/musicdb-mockup-1-m.png  300w,
+              ../img/musicdb-mockup-1-l.png  400w,
+              ../img/musicdb-mockup-1-xl.png 600w
+            "
+            sizes="(min-width: 2080px) 553px, (min-width: 620px) calc(26.11vw + 13px), 80vw"
+            alt="iphone mockup"
             class="mdb-header__img"
           />
         </div>
@@ -199,8 +206,10 @@
     <footer class="mdb-footer">
       <div class="mdb-section mdb-section--footer">
         <div class="mdb-section__left mdb-section__left--footer">
-          <h4 class="mdb-heading--tertiary mdb-heading--tertiary--white">
-            Next project
+          <h4
+            class="mdb-heading--tertiary mdb-heading--tertiary--white mdb-footer__heading"
+          >
+            <span>Next project</span>
           </h4>
           <ul class="mdb-footer__list">
             <li>

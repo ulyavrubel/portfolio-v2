@@ -23,6 +23,13 @@ $breakpoint arg choices
 //1em - 16px
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == sm-phone {
+    @media only screen and (max-width: 22.5em) {
+      //360px
+      @content;
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       //600px
