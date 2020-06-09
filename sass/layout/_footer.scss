@@ -16,10 +16,18 @@
     &:link,
     &:visited {
       text-decoration: none;
-      color: $color-primary-green;
+      color: $color-primary-red;
     }
     &:hover {
       font-weight: 500;
+    }
+
+    &--white {
+      &,
+      &:link,
+      &:visited {
+        color: $color-white;
+      }
     }
   }
 
@@ -43,14 +51,16 @@
       filter: brightness(0) invert(1);
     }
     &:hover {
-      filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg)
-        brightness(99%) contrast(116%);
+      // https://codepen.io/sosuke/pen/Pjoqqp
+      filter: invert(32%) sepia(18%) saturate(6547%) hue-rotate(339deg)
+        brightness(111%) contrast(102%);
     }
   }
 }
 
-.mdb-footer {
+.wide-footer {
   background-color: $color-gray-dark;
+  padding: 6.4rem;
   @include respond(phone) {
     padding-bottom: 4.8rem;
   }

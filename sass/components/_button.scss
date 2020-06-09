@@ -22,7 +22,7 @@
     background: linear-gradient(
       to right bottom,
       $color-primary-blue,
-      $color-primary-green
+      $color-primary-red
     );
   }
 
@@ -31,7 +31,7 @@
     background-image: linear-gradient(
       to right bottom,
       $color-primary-blue 50%,
-      $color-primary-green
+      $color-primary-red
     );
     -webkit-background-clip: text;
     background-clip: text;

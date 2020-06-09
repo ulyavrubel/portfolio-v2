@@ -42,3 +42,8 @@ body {
     display: block;
   }
 }
+
+::selection {
+  background-color: $color-primary-red;
+  color: $color-white;
+}

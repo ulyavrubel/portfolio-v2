@@ -47,6 +47,10 @@ body {
   .mobile {
     display: block; } }
 
+::selection {
+  background-color: #ff4133;
+  color: white; }
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -125,17 +129,17 @@ body {
     z-index: -1;
     margin: -1px;
     border-radius: inherit;
-    background: linear-gradient(to right bottom, #211df4, #02ff3a); }
+    background: linear-gradient(to right bottom, #1f28cf, #ff4133); }
   .gradient-box:hover .btn {
     display: inline-block;
-    background-image: linear-gradient(to right bottom, #211df4 50%, #02ff3a);
+    background-image: linear-gradient(to right bottom, #1f28cf 50%, #ff4133);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; }
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
-  color: #211df4;
+  color: #1f28cf;
   font-size: 1.4rem;
   transition: all 0.3s; }
 
@@ -179,8 +183,36 @@ body {
     color: #3c3c3c;
     transition: all 0.2s; }
   .navigation__link:hover {
-    color: #211df4;
+    color: #ff4133;
     font-weight: 600; }
+  .navigation__link--active, .navigation__link--active:link, .navigation__link--active:visited {
+    color: #ff4133; }
+
+.back-navigation {
+  position: relative; }
+  .back-navigation__button {
+    position: fixed;
+    z-index: 10;
+    left: 4.8rem;
+    top: 6.4rem;
+    background-color: #555555;
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 50%;
+    box-shadow: 0 1rem 3rem rgba(60, 60, 60, 0.3);
+    transition: all 0.2s; }
+    @media only screen and (max-width: 37.5em) {
+      .back-navigation__button {
+        position: absolute; } }
+    .back-navigation__button:hover {
+      transform: scaleX(1.05) scaleY(1.05); }
+  .back-navigation__img {
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%); }
 
 .footer {
   height: 4.8rem;
@@ -194,9 +226,11 @@ body {
     font-size: 1.2rem; }
   .footer__link, .footer__link:link, .footer__link:visited {
     text-decoration: none;
-    color: #02ff3a; }
+    color: #ff4133; }
   .footer__link:hover {
     font-weight: 500; }
+  .footer__link--white, .footer__link--white:link, .footer__link--white:visited {
+    color: white; }
   @media only screen and (max-width: 37.5em) {
     .footer__icons {
       position: absolute;
@@ -208,47 +242,48 @@ body {
     .footer__icon--white {
       filter: brightness(0) invert(1); }
     .footer__icon:hover {
-      filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg) brightness(99%) contrast(116%); }
+      filter: invert(32%) sepia(18%) saturate(6547%) hue-rotate(339deg) brightness(111%) contrast(102%); }
 
-.mdb-footer {
-  background-color: #3c3c3c; }
+.wide-footer {
+  background-color: #3c3c3c;
+  padding: 6.4rem; }
   @media only screen and (max-width: 37.5em) {
-    .mdb-footer {
+    .wide-footer {
       padding-bottom: 4.8rem; } }
-  .mdb-footer__list {
+  .wide-footer__list {
     margin: 3.2rem 0 6.4rem 0; }
-    .mdb-footer__list li:not(:first-child) {
+    .wide-footer__list li:not(:first-child) {
       margin-top: 1.2rem; }
-    .mdb-footer__list--nav {
+    .wide-footer__list--nav {
       margin-top: 0; }
       @media only screen and (max-width: 37.5em) {
-        .mdb-footer__list--nav {
+        .wide-footer__list--nav {
           margin-bottom: 0; } }
   @media only screen and (max-width: 37.5em) {
-    .mdb-footer__heading span {
+    .wide-footer__heading span {
       display: none; } }
   @media only screen and (max-width: 37.5em) {
-    .mdb-footer__heading::after {
+    .wide-footer__heading::after {
       content: ">>"; } }
-  .mdb-footer__link {
+  .wide-footer__link {
     font-size: 1.8rem;
     text-decoration: none;
     color: white;
     transition: all 0.4s; }
     @media only screen and (max-width: 37.5em) {
-      .mdb-footer__link {
+      .wide-footer__link {
         font-size: 2.4rem;
         text-transform: uppercase; } }
-    .mdb-footer__link:hover {
+    .wide-footer__link:hover {
       margin-left: 2.4rem; }
-  .mdb-footer__navigation-link {
+  .wide-footer__navigation-link {
     font-weight: bold;
     text-decoration: none;
     color: white;
     font-size: 3.6rem;
     text-transform: uppercase;
     transition: all 0.4s; }
-    .mdb-footer__navigation-link:hover {
+    .wide-footer__navigation-link:hover {
       margin-right: 2.4rem; }
 
 .container {
@@ -277,7 +312,7 @@ body {
       margin-bottom: 2.4rem; }
   .projects__link:hover {
     margin-left: 2.4rem;
-    color: #211df4; }
+    color: #1f28cf; }
   .projects__link--span {
     display: none;
     filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg) brightness(99%) contrast(116%); }
@@ -374,29 +409,6 @@ body {
   @media only screen and (max-width: 37.5em) {
     .mdb-button-box {
       margin-top: 3.2rem; } }
-
-.mdb-navigation {
-  position: relative; }
-  .mdb-navigation__button {
-    position: fixed;
-    z-index: 10;
-    left: 4.8rem;
-    top: 6.4rem;
-    background-color: #555555;
-    width: 6.4rem;
-    height: 6.4rem;
-    border-radius: 50%;
-    box-shadow: 0 1rem 3rem rgba(60, 60, 60, 0.3);
-    transition: all 0.2s; }
-    .mdb-navigation__button:hover {
-      transform: scaleX(1.05) scaleY(1.05); }
-  .mdb-navigation__img {
-    width: 3.2rem;
-    height: 3.2rem;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%); }
 
 .mdb-arrow-down {
   position: absolute;
@@ -541,7 +553,8 @@ body {
       .mdb-section--video {
         padding: 6.4rem 0; } }
   .mdb-section--footer {
-    align-items: flex-start; }
+    align-items: flex-start;
+    padding: 0; }
   @media only screen and (max-width: 37.5em) {
     .mdb-section__left--footer {
       position: relative; } }
@@ -593,3 +606,39 @@ body {
   @media only screen and (max-width: 37.5em) {
     .mdb-video {
       width: 90vw; } }
+
+.aboutme-container {
+  max-width: 89.6rem;
+  margin: auto;
+  padding: 6.4rem;
+  font-size: 2rem;
+  line-height: 1.6; }
+  @media only screen and (max-width: 56.25em) {
+    .aboutme-container {
+      padding: 6.4rem 12.8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .aboutme-container {
+      padding: 12.8rem 6.4rem; } }
+
+.aboutme-header {
+  text-transform: uppercase;
+  margin-bottom: 4.8rem; }
+
+.aboutme-p {
+  margin-top: 3.2rem; }
+
+.aboutme-link {
+  text-decoration: none;
+  color: #ff4133; }
+
+.aboutme-img-container {
+  text-align: center;
+  margin: 4.8rem 0; }
+
+.aboutme-img {
+  height: 25.6rem; }
+
+.aboutme-list {
+  list-style-type: none; }
+  .aboutme-list__item:first-child {
+    margin-top: 0.8rem; }
