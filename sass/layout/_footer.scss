@@ -6,9 +6,22 @@
   padding-left: 6.4rem;
   padding-right: 6.4rem;
 
+  @include respond(phone) {
+    display: block;
+  }
+
   &__par {
     color: $color-gray-light;
     font-size: 1.2rem;
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    &--home {
+      @include respond(phone) {
+        padding-bottom: 12.8rem;
+      }
+    }
   }
 
   &__link {
@@ -33,9 +46,14 @@
 
   &__icons {
     @include respond(phone) {
-      position: absolute;
-      bottom: -30rem;
+      text-align: center;
+      margin: 4.8rem 0 2.4rem 0;
     }
+    // &--home {
+    //   @include respond(phone) {
+    //     margin: 0 0 2.4rem 0;
+    //   }
+    // }
   }
 
   &__icon-link {

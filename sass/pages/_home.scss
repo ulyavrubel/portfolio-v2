@@ -1,18 +1,44 @@
 .container {
   height: calc(100vh - 7.2rem - 4.8rem);
-  padding: 6.4rem;
+  max-width: 150rem;
+  margin: auto;
+  padding: 6.4rem 0 6.4rem 12.8rem;
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @include respond(tab-port) {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @include respond(phone) {
+    padding: 6.4rem;
+  }
 }
 
 .header {
   width: 50vw;
+  @include respond(phone) {
+    width: auto;
+    margin-top: 12.8rem;
+  }
 }
 
 .projects {
   width: 50vw;
-  padding-left: 19.2rem;
+  padding-left: 10vw;
+
+  @include respond(tab-port) {
+    padding-left: 0;
+    margin-top: 12.8rem;
+  }
+
+  @include respond(phone) {
+    width: auto;
+  }
 
   &__list {
     list-style: none;
@@ -24,10 +50,14 @@
     &:visited {
       text-decoration: none;
       display: block;
-      font-size: 3rem;
       font-weight: 600;
+      font-size: 3rem;
       color: $color-gray-dark;
       transition: all 0.4s;
+
+      @include respond(phone) {
+        font-size: 2.4rem;
+      }
 
       &:not(:last-child) {
         margin-bottom: 2.4rem;
@@ -39,19 +69,21 @@
     }
     &--span {
       display: none;
-      // font-size: 2.4rem;
-      filter: invert(75%) sepia(28%) saturate(3339%) hue-rotate(76deg)
-        brightness(99%) contrast(116%);
+      filter: invert(32%) sepia(18%) saturate(6547%) hue-rotate(339deg)
+        brightness(111%) contrast(102%);
     }
   }
 
   &__img {
     position: absolute;
     z-index: -1;
-
     height: 70vh;
     opacity: 0;
     transition: all 0.8s ease-out;
+
+    @include respond(tab-port) {
+      display: none;
+    }
 
     &--musicdb-1 {
       left: -30vw;
@@ -70,11 +102,6 @@
       height: 100vh;
       object-fit: cover;
     }
-
-    // &--recipe-2 {
-    //   left: 75vw;
-    //   bottom: 100vh;
-    // }
   }
 
   &__link--musicdb:hover + &__img--musicdb-1 {
@@ -93,8 +120,4 @@
   &__link--recipe:hover + &__img--recipe-1 {
     opacity: 0.2;
   }
-  // &__link--recipe:hover ~ &__img--recipe-2 {
-  //   opacity: 0.2;
-  //   bottom: 2rem;
-  // }
 }

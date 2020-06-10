@@ -41,6 +41,15 @@ body {
   @include respond(tab-port) {
     display: block;
   }
+
+  // .desktop {
+  //   @include respond(tab-port) {
+  //     display: none;
+  //   }
+  //   @include respond(tab-land) {
+  //     display: block;
+  //   }
+  // }
 }
 
 ::selection {

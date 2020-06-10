@@ -5,7 +5,7 @@
   background: $color-white;
   background-clip: padding-box;
   border: solid 1px transparent;
-  border-radius: 3px;
+  border-radius: 15rem;
   margin-top: 3.2rem;
   cursor: pointer;
 
@@ -47,6 +47,9 @@
     color: $color-primary-blue;
     font-size: 1.4rem;
     transition: all 0.3s;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
   }
 
   &--mdb {
