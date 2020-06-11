@@ -15,33 +15,36 @@
     <title>About me</title>
   </head>
   <body>
-    <div class="back-navigation">
-      <a href="/index.html">
-        <div class="back-navigation__button">
-          <img
-            src="../img/musicdb/back.svg"
-            alt="arrow back"
-            class="back-navigation__img"
-          /></div
-      ></a>
+    <div class="hamburger mobile">
+      <input type="checkbox" class="hamburger__checkbox" id="navi-toggle" />
+
+      <label
+        for="navi-toggle"
+        class="hamburger__button hamburger__button--notfixed"
+      >
+        <span class="hamburger__icon">
+          &nbsp;
+        </span>
+      </label>
+
+      <div class="hamburger__background hamburger__background--notfixed">
+        &nbsp;
+      </div>
+
+      <nav class="hamburger__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="../index.html" class="menu__link">Home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Contact</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">CV</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="navigation">
-      <ul class="navigation__list">
-        <li class="navigation__item">
-          <a
-            href="./aboutme.html"
-            class="navigation__link navigation__link--active"
-            >About me</a
-          >
-        </li>
-        <li class="navigation__item">
-          <a href="" class="navigation__link">Contacts</a>
-        </li>
-        <li class="navigation__item">
-          <a href="" class="navigation__link">CV</a>
-        </li>
-      </ul>
-    </nav>
     <div class="aboutme-container">
       <header class="aboutme-header">
         About me
@@ -65,8 +68,8 @@
       </p>
       <div class="aboutme-img-container">
         <img
-          src="../img/aboutme/standing-18.png"
-          srcset="../img/aboutme/standing-18@2x.png 2x"
+          src="../img/aboutme/sitting-1.png"
+          srcset="../img/aboutme/sitting-1@2x.png 2x"
           alt="human standing"
           class="aboutme-img"
         />
@@ -123,8 +126,8 @@
       </p>
       <div class="aboutme-img-container">
         <img
-          src="../img/aboutme/sitting-1.png"
-          srcset="../img/aboutme/sitting-1@2x.png 2x"
+          src="../img/aboutme/standing-18.png"
+          srcset="../img/aboutme/standing-18@2x.png 2x"
           alt="human standing"
           class="aboutme-img"
         />
@@ -167,7 +170,7 @@
               >
             </li>
             <li class="wide-footer__navigation-item">
-              <a href="/" class="wide-footer__navigation-link">Contacts</a>
+              <a href="/" class="wide-footer__navigation-link">Contact</a>
             </li>
             <li class="wide-footer__navigation-item">
               <a href="/" class="wide-footer__navigation-link">CV</a>
@@ -194,7 +197,7 @@
                 alt="github icon"
             /></a>
             <a
-              href="www.linkedin.com/in/ulyana-sichkar-80432126"
+              href="https://www.linkedin.com/in/ulyana-sichkar-80432126/"
               class="footer__icon-link"
             >
               <img

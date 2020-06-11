@@ -47,6 +47,14 @@ body {
   .mobile {
     display: block; } }
 
+@media only screen and (max-width: 75em) {
+  .desktop {
+    display: block; } }
+
+@media only screen and (max-width: 56.25em) {
+  .desktop {
+    display: none; } }
+
 ::selection {
   background-color: #ff4133;
   color: white; }
@@ -203,18 +211,131 @@ body {
   .navigation__link--active, .navigation__link--active:link, .navigation__link--active:visited {
     color: #ff4133; }
 
+.hamburger__checkbox {
+  display: none; }
+
+@media only screen and (max-width: 56.25em) {
+  .hamburger__checkbox:checked ~ .hamburger__background {
+    transform: scale(60); } }
+
+@media only screen and (max-width: 37.5em) {
+  .hamburger__checkbox:checked ~ .hamburger__background {
+    transform: scale(35); } }
+
+.hamburger__checkbox:checked ~ .hamburger__menu {
+  opacity: 1;
+  width: 100%; }
+
+.hamburger__checkbox:checked ~ .hamburger__button {
+  background-image: none;
+  background-color: white; }
+
+.hamburger__button {
+  width: 6.4rem;
+  height: 6.4rem;
+  position: fixed;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 1rem 3rem rgba(60, 60, 60, 0.3);
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(#1f28cf, #ff4133);
+  top: 4.8rem;
+  right: 4.8rem; }
+  .hamburger__button--notfixed {
+    position: absolute; }
+
+.hamburger__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  background-image: linear-gradient(#1f28cf, #ff4133);
+  z-index: 5;
+  transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
+  .hamburger__background--notfixed {
+    position: absolute; }
+
+.hamburger__menu {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7;
+  opacity: 0;
+  width: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
+
+.hamburger__icon {
+  position: relative;
+  margin-top: 3.2rem; }
+  .hamburger__icon, .hamburger__icon::before, .hamburger__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: white;
+    display: inline-block; }
+  .hamburger__icon::before, .hamburger__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .hamburger__icon::before {
+    top: -0.8rem; }
+  .hamburger__icon::after {
+    top: 0.8rem; }
+
+.hamburger__checkbox:checked + .hamburger__button .hamburger__icon {
+  background-color: transparent; }
+
+.hamburger__checkbox:checked + .hamburger__button .hamburger__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+  background-color: #3c3c3c; }
+
+.hamburger__checkbox:checked + .hamburger__button .hamburger__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+  background-color: #3c3c3c; }
+
+.menu__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.menu__item {
+  margin: 1.2rem; }
+
+.menu__link:link, .menu__link:visited {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .menu__link:link:hover, .menu__link:linkactive, .menu__link:visited:hover, .menu__link:visitedactive {
+    margin-left: 2.4rem; }
+
 .back-navigation {
   position: relative; }
   .back-navigation__button {
-    position: fixed;
-    z-index: 10;
-    left: 4.8rem;
-    top: 6.4rem;
-    background-color: #555555;
     width: 6.4rem;
     height: 6.4rem;
+    position: fixed;
     border-radius: 50%;
+    z-index: 10;
     box-shadow: 0 1rem 3rem rgba(60, 60, 60, 0.3);
+    text-align: center;
+    cursor: pointer;
+    background-color: #555555;
+    left: 4.8rem;
+    top: 4.8rem;
     transition: all 0.2s; }
     @media only screen and (max-width: 37.5em) {
       .back-navigation__button {
@@ -320,12 +441,12 @@ body {
   align-items: center; }
   @media only screen and (max-width: 56.25em) {
     .container {
-      height: auto;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center; } }
   @media only screen and (max-width: 37.5em) {
     .container {
+      height: auto;
       padding: 6.4rem; } }
 
 .header {
@@ -333,7 +454,7 @@ body {
   @media only screen and (max-width: 37.5em) {
     .header {
       width: auto;
-      margin-top: 12.8rem; } }
+      margin-top: 19.2rem; } }
 
 .projects {
   width: 50vw;
@@ -341,7 +462,7 @@ body {
   @media only screen and (max-width: 56.25em) {
     .projects {
       padding-left: 0;
-      margin-top: 12.8rem; } }
+      margin-top: 9.6rem; } }
   @media only screen and (max-width: 37.5em) {
     .projects {
       width: auto; } }
@@ -354,9 +475,6 @@ body {
     font-size: 3rem;
     color: #3c3c3c;
     transition: all 0.4s; }
-    @media only screen and (max-width: 37.5em) {
-      .projects__link, .projects__link:link, .projects__link:visited {
-        font-size: 2.4rem; } }
     .projects__link:not(:last-child), .projects__link:link:not(:last-child), .projects__link:visited:not(:last-child) {
       margin-bottom: 2.4rem; }
   .projects__link:hover {

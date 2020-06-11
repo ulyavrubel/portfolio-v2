@@ -11,7 +11,32 @@
     <title>Ulyana Sichkar</title>
   </head>
   <body>
-    <nav class="navigation">
+    <div class="hamburger mobile">
+      <input type="checkbox" class="hamburger__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="hamburger__button">
+        <span class="hamburger__icon">
+          &nbsp;
+        </span>
+      </label>
+
+      <div class="hamburger__background">&nbsp;</div>
+
+      <nav class="hamburger__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="./pages/aboutme.html" class="menu__link">About me</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Contact</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">CV</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="navigation desktop">
       <ul class="navigation__list">
         <li class="navigation__item">
           <a href="./pages/aboutme.html" class="navigation__link">About me</a>
@@ -106,7 +131,7 @@
             alt="github icon"
         /></a>
         <a
-          href="www.linkedin.com/in/ulyana-sichkar-80432126"
+          href="https://www.linkedin.com/in/ulyana-sichkar-80432126/"
           class="footer__icon-link"
         >
           <img
