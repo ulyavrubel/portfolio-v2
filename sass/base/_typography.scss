@@ -79,3 +79,17 @@ body {
     margin-top: 0.8rem;
   }
 }
+
+.recipe-heading {
+  &--primary {
+    font-size: 3.6rem;
+    margin: 4.8rem 0;
+    line-height: 1.6;
+  }
+}
+
+.recipe-p {
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
