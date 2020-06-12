@@ -55,6 +55,7 @@
     }
 
     &__checkbox:checked ~ &__menu {
+      visibility: visible;
       opacity: 1;
       width: 100%;
     }
@@ -100,6 +101,7 @@
     }
 
     &__menu {
+      visibility: hidden;
       height: 100vh;
       position: fixed;
       top: 0;

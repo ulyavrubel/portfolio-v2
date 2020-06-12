@@ -12,6 +12,13 @@
     color: $color-primary-blue;
   }
 
+  &--header {
+    @include respond(phone) {
+      min-height: 100vh;
+      padding: 9.6rem 2.4rem;
+    }
+  }
+
   &__text {
     text-align: left;
     max-width: 76.8rem;
@@ -19,12 +26,33 @@
     padding: 3.2rem 0;
     font-size: 2.4rem;
     line-height: 1.6;
+    @include respond(tab-port) {
+      padding: 3.2rem 6.4rem;
+    }
+    @include respond(phone) {
+      padding: 0;
+    }
+  }
+
+  &--mockups {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @include respond(phone) {
+      padding: 9.6rem 0;
+    }
   }
 }
 
 .recipe-video {
   width: 80%;
   max-width: 100rem;
+  margin-top: 4.8rem;
+  @include respond(phone) {
+    width: calc(100vw - 4.8rem);
+    max-width: auto;
+    margin-top: 6.4rem;
+  }
 }
 
 .recipe-list {
@@ -38,8 +66,27 @@
 .recipe-img {
   height: 51.2rem;
   visibility: hidden;
+
+  @include respond(tab-land) {
+    height: 45rem;
+  }
+
+  @include respond(phone) {
+    height: auto;
+    width: 30vw;
+  }
+
+  &__container {
+    @include respond(tab-port) {
+      // height: 51.2rem;
+    }
+  }
+
   &:nth-child(odd) {
     margin: 0 3.2rem;
+    @include respond(phone) {
+      margin: 0 0.5rem;
+    }
   }
 
   &--1 {
@@ -47,6 +94,10 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
     visibility: visible;
+    @include respond(tab-port) {
+      padding-bottom: 12.8rem;
+      animation-name: moveInBottom;
+    }
   }
 
   &--2 {
@@ -54,6 +105,11 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
     visibility: visible;
+    @include respond(tab-port) {
+      padding: 6.4rem 0;
+      animation-name: moveInBottom;
+      animation-delay: 0.2s;
+    }
   }
 
   &--3 {
@@ -61,5 +117,10 @@
     animation-duration: 1s;
     animation-timing-function: ease-out;
     visibility: visible;
+    @include respond(tab-port) {
+      padding-top: 12.8rem;
+      animation-name: moveInBottom;
+      animation-delay: 0.4s;
+    }
   }
 }

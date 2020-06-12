@@ -26,10 +26,6 @@
       ></a>
     </div>
     <div class="recipe-section recipe-section--header">
-      <video class="recipe-video" controls>
-        <source src="../img/recipe/recipe.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
       <header class="recipe-header">
         <h1 class="recipe-heading--primary">
           Recipe generator created with <br />
@@ -50,6 +46,10 @@
             >GitHub</a
           >
         </div>
+        <video class="recipe-video" controls poster="../img/recipe/poster.PNG">
+          <source src="../img/recipe/recipe.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </header>
     </div>
     <div class="recipe-section recipe-section--desc">
@@ -91,28 +91,34 @@
         </ul>
       </div>
     </div>
-    <div class="recipe-section recipe-section--mockups">
-      <img
-        src="../img/recipe/recipe-mockup-1-s.png"
-        srcset="../img/recipe/recipe-mockup-1@2x.png 2x"
-        alt="iphone mockup"
-        class="recipe-img"
-        id="img1"
-      />
-      <img
-        src="../img/recipe/recipe-mockup-2-s.png"
-        srcset="../img/recipe/recipe-mockup-2@2x.png 2x"
-        alt="iphone mockup"
-        class="recipe-img"
-        id="img2"
-      />
-      <img
-        src="../img/recipe/recipe-mockup-3-s.png"
-        srcset="../img/recipe/recipe-mockup-3@2x.png 2x"
-        alt="iphone mockup"
-        class="recipe-img"
-        id="img3"
-      />
+    <div class="recipe-section recipe-section--mockups" id="mockups">
+      <div class="recipe-img__container">
+        <img
+          src="../img/recipe/recipe-mockup-1-s.png"
+          srcset="../img/recipe/recipe-mockup-1@2x.png 2x"
+          alt="iphone mockup"
+          class="recipe-img"
+          id="img1"
+        />
+      </div>
+      <div class="recipe-img__container">
+        <img
+          src="../img/recipe/recipe-mockup-2-s.png"
+          srcset="../img/recipe/recipe-mockup-2@2x.png 2x"
+          alt="iphone mockup"
+          class="recipe-img"
+          id="img2"
+        />
+      </div>
+      <div class="recipe-img__container">
+        <img
+          src="../img/recipe/recipe-mockup-3-s.png"
+          srcset="../img/recipe/recipe-mockup-3@2x.png 2x"
+          alt="iphone mockup"
+          class="recipe-img"
+          id="img3"
+        />
+      </div>
     </div>
 
     <footer class="wide-footer">

@@ -2,7 +2,6 @@
   0% {
     opacity: 0;
     transform: translateX(-30rem);
-    visibility: visible;
   }
   80% {
     transform: translateX(2rem);
@@ -17,7 +16,6 @@
   0% {
     opacity: 0;
     transform: translateX(30rem);
-    visibility: visible;
   }
   80% {
     transform: translateX(-2rem);
@@ -31,10 +29,23 @@
 @keyframes emersion {
   0% {
     opacity: 0;
-    visibility: visible;
   }
 
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30rem);
+  }
+  80% {
+    transform: translateY(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

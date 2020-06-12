@@ -1,6 +1,7 @@
 const img1 = document.getElementById("img1");
 const img2 = document.getElementById("img2");
 const img3 = document.getElementById("img3");
+const mockups = document.getElementById("mockups");
 
 var isInViewport = function (elem) {
   var bounding = elem.getBoundingClientRect();
@@ -25,14 +26,9 @@ var isInViewportTop = function (elem) {
 window.addEventListener(
   "scroll",
   function (event) {
-    if (isInViewport(img1)) {
+    if (isInViewport(mockups)) {
       img1.classList.add("recipe-img--1");
-    }
-
-    if (isInViewport(img2)) {
       img2.classList.add("recipe-img--2");
-    }
-    if (isInViewport(img3)) {
       img3.classList.add("recipe-img--3");
     }
   },
@@ -42,14 +38,9 @@ window.addEventListener(
 window.addEventListener(
   "scroll",
   function (event) {
-    if (!isInViewportTop(img1)) {
+    if (!isInViewportTop(mockups)) {
       img1.classList.remove("recipe-img--1");
-    }
-
-    if (!isInViewportTop(img2)) {
       img2.classList.remove("recipe-img--2");
-    }
-    if (!isInViewportTop(img3)) {
       img3.classList.remove("recipe-img--3");
     }
   },
