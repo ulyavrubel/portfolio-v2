@@ -76,12 +76,6 @@
     width: 30vw;
   }
 
-  &__container {
-    @include respond(tab-port) {
-      // height: 51.2rem;
-    }
-  }
-
   &:nth-child(odd) {
     margin: 0 3.2rem;
     @include respond(phone) {

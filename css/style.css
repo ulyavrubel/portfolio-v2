@@ -40,7 +40,7 @@ $breakpoint arg choices
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(30rem); }
+    transform: translateY(20rem); }
   80% {
     transform: translateY(-2rem); }
   100% {
@@ -171,6 +171,14 @@ body {
 
 .recipe-p:not(:last-child) {
   margin-bottom: 2.4rem; }
+
+.contact__header--primary {
+  font-size: 6.4rem; }
+
+.contact__header--secondary {
+  font-size: 2.4rem;
+  margin-top: 3.6rem;
+  line-height: 1.6; }
 
 .u-center-text {
   display: block !important;
@@ -607,6 +615,21 @@ body {
   list-style-type: none; }
   .aboutme-list__item:first-child {
     margin-top: 0.8rem; }
+
+.contact__container {
+  height: calc(100vh - 7.2rem - 4.8rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .contact__container {
+      height: calc(100vh - 7.2rem - 4.8rem - 12.8rem); } }
+
+.contact__link {
+  text-decoration: none;
+  color: #ff4133; }
 
 .mdb-container {
   background-image: url(../img/musicdb/polygon1.svg);
