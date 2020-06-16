@@ -98,9 +98,33 @@
       height: 100vh;
       object-fit: cover;
     }
+
+    &--api-1 {
+      left: 45vw;
+      top: 40vh;
+      width: 250px;
+      height: auto;
+      transform: scaleX(0.5) scaleY(0.5);
+    }
+
+    &--api-2 {
+      left: 55vw;
+      top: 65vh;
+      width: 350px;
+      height: auto;
+      transform: scaleX(0.5) scaleY(0.5);
+    }
+
+    &--api-3 {
+      left: 45vw;
+      top: 75vh;
+      width: 250px;
+      height: auto;
+      transform: scaleX(0.5) scaleY(0.5);
+    }
   }
 
-  &__link--musicdb:hover + &__img--musicdb-1 {
+  &__link--musicdb:hover ~ &__img--musicdb-1 {
     opacity: 0.2;
     left: 40vw;
   }
@@ -115,5 +139,18 @@
 
   &__link--recipe:hover + &__img--recipe-1 {
     opacity: 0.2;
+  }
+
+  &__link--api:hover + &__img--api-1 {
+    opacity: 0.2;
+    transform: scaleX(1.2) scaleY(1.2);
+  }
+  &__link--api:hover ~ &__img--api-2 {
+    opacity: 0.2;
+    transform: scaleX(1) scaleY(1);
+  }
+  &__link--api:hover ~ &__img--api-3 {
+    opacity: 0.2;
+    transform: scaleX(0.9) scaleY(0.9);
   }
 }

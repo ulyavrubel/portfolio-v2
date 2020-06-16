@@ -569,7 +569,25 @@ body {
       width: 100vw;
       height: 100vh;
       object-fit: cover; }
-  .projects__link--musicdb:hover + .projects__img--musicdb-1 {
+    .projects__img--api-1 {
+      left: 45vw;
+      top: 40vh;
+      width: 250px;
+      height: auto;
+      transform: scaleX(0.5) scaleY(0.5); }
+    .projects__img--api-2 {
+      left: 55vw;
+      top: 65vh;
+      width: 350px;
+      height: auto;
+      transform: scaleX(0.5) scaleY(0.5); }
+    .projects__img--api-3 {
+      left: 45vw;
+      top: 75vh;
+      width: 250px;
+      height: auto;
+      transform: scaleX(0.5) scaleY(0.5); }
+  .projects__link--musicdb:hover ~ .projects__img--musicdb-1 {
     opacity: 0.2;
     left: 40vw; }
   .projects__link--musicdb:hover ~ .projects__img--musicdb-2 {
@@ -579,6 +597,15 @@ body {
     display: inline; }
   .projects__link--recipe:hover + .projects__img--recipe-1 {
     opacity: 0.2; }
+  .projects__link--api:hover + .projects__img--api-1 {
+    opacity: 0.2;
+    transform: scaleX(1.2) scaleY(1.2); }
+  .projects__link--api:hover ~ .projects__img--api-2 {
+    opacity: 0.2;
+    transform: scaleX(1) scaleY(1); }
+  .projects__link--api:hover ~ .projects__img--api-3 {
+    opacity: 0.2;
+    transform: scaleX(0.9) scaleY(0.9); }
 
 .aboutme-container {
   max-width: 89.6rem;
