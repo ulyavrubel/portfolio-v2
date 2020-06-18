@@ -54,10 +54,7 @@
       font-size: 3rem;
       color: $color-gray-dark;
       transition: all 0.4s;
-
-      &:not(:last-child) {
-        margin-bottom: 2.4rem;
-      }
+      margin-bottom: 2.4rem;
     }
     &:hover {
       margin-left: 2.4rem;

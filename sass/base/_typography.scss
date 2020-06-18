@@ -107,3 +107,31 @@ body {
     line-height: 1.6;
   }
 }
+
+.portfolio-heading {
+  margin-left: -12.8rem;
+  margin-bottom: 2.4rem;
+  color: $color-primary-blue;
+
+  @include respond(tab-land) {
+    margin-left: 0rem;
+  }
+
+  &--primary {
+    color: $color-primary-red;
+  }
+  &--gradient {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.portfolio-p {
+  margin-top: 2.4rem;
+
+  &:first-of-type {
+    @include respond(tab-land) {
+      margin-top: 6.4rem;
+    }
+  }
+}

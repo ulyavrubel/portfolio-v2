@@ -102,5 +102,27 @@
         color: $color-primary-red;
       }
     }
+
+    &--portfolio {
+      &,
+      &:link,
+      &:visited {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-red,
+          $color-primary-blue
+        );
+        color: $color-white;
+        margin-left: -12.8rem;
+        transition: all 0.4s;
+
+        @include respond(tab-land) {
+          margin-left: 0rem;
+        }
+      }
+      &:hover {
+        font-size: 1.8rem;
+      }
+    }
   }
 }

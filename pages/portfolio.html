@@ -18,7 +18,7 @@
   <body>
     <div class="back-navigation">
       <a href="/index.html">
-        <div class="back-navigation__button">
+        <div class="back-navigation__button back-navigation__button--red">
           <img
             src="../img/musicdb/back.svg"
             alt="arrow back"
@@ -31,6 +31,12 @@
         <h1 class="portfolio-heading portfolio-heading--primary">
           Personal Portfolio
         </h1>
+        <a
+          href="https://github.com/ulyavrubel/portfolio-v2"
+          class="btn btn__project btn__project--portfolio"
+          target="_blank"
+          >GitHub</a
+        >
         <p class="portfolio-p">
           Trying to keep things simple and minimalistic I still wanted my
           portfolio to be unique and memorable.
@@ -44,8 +50,17 @@
       </div>
       <div class="portfolio-section portfolio-section--images">
         <h2 class="portfolio-heading portfolio-heading--secondary">
-          Images appear on hover for a link
+          Images appear on
+          <a href="#" class="portfolio-link--img">link</a> hover
+
+          <img
+            src="../img/hi.svg"
+            alt="hi message icon"
+            class="portfolio-img"
+            width="96px"
+          />
         </h2>
+
         <p class="portfolio-p">
           To get this effect I used absolutely positioned images and CSS
           combinators. Let’s see how images appear for the Music Database link
@@ -55,48 +70,56 @@
           HTML:
         </p>
         <pre><code class="language-html">
-            &lt;a
-              href="./pages/musicdb.html"
-              class="projects__link projects__link--musicdb"
-              >Music Database >>&lt;/a
-            >
-            &lt;img
-              class="projects__img projects__img--musicdb-1"
-              src="img/musicdb-mockup-1.png"
-              alt="iphone mockup"
-            />
-            &lt;img
-              class="projects__img projects__img--musicdb-2"
-              src="img/musicdb-mockup-2.png"
-              alt="iphone mockup"
-            />
+&lt;li class="projects__item">
+    &lt;a
+    href="./pages/musicdb.html"
+    class="projects__link projects__link--musicdb"
+    >Music Database >>&lt;/a
+    >
+    &lt;img
+    class="projects__img projects__img--musicdb-1"
+    src="img/musicdb-mockup-1.png"
+    alt="iphone mockup"
+    />
+    &lt;img
+    class="projects__img projects__img--musicdb-2"
+    src="img/musicdb-mockup-2.png"
+    alt="iphone mockup"
+    />
+&lt;/li>
         </code></pre>
         <p class="portfolio-p">
-          CSS for img initial state: (who is not familiar with SCSS syntax "&"
-          replaces parent selector, in this case "projects" and "projects__img")
+          CSS for img initial state (who is not familiar with SCSS syntax "&"
+          replaces parent selector, in this case ".projects" and
+          ".projects__img" for nested elements):
         </p>
         <pre><code class="language-css">
-            &__img {
-                position: absolute;
-                z-index: -1;
-                height: 70vh;
-                opacity: 0;
-                transition: all 0.8s ease-out;              
-            
-                &--musicdb-1 {
-                  left: -30vw;
-                  bottom: 2rem;
-                }
-            
-                &--musicdb-2 {
-                  left: 75vw;
-                  bottom: 100vh;
-                }
-            }
+&__img {
+    position: absolute;
+    z-index: -1;
+    height: 70vh;
+    opacity: 0;
+    transition: all 0.8s ease-out;              
+
+    &--musicdb-1 {
+      left: -30vw;
+      bottom: 2rem;
+    }
+
+    &--musicdb-2 {
+      left: 75vw;
+      bottom: 100vh;
+    }
+}
         </code></pre>
         <p class="portfolio-p">
           As images are the link’s siblings I used general sibling selector
-          tilde (~). Thanks to Ladybug’s CSS Combinators Cheat Sheets!
+          tilde (~). Thanks to
+          <a
+            href="https://dev.to/ladybug/css-cheat-sheets-3ee0"
+            class="portfolio-link"
+            >Ladybug’s CSS Combinators Cheat Sheet</a
+          >!
         </p>
         <p class="portfolio-p">
           Changing left and bottom values on hover give a visual effect of
@@ -104,14 +127,14 @@
         </p>
         <p class="portfolio-p">CSS for link’s hover state:</p>
         <pre><code class="language-css">
-            &__link--musicdb:hover ~ &__img--musicdb-1 {
-                opacity: 0.2;
-                left: 40vw;
-              }
-              &__link--musicdb:hover ~ &__img--musicdb-2 {
-                opacity: 0.2;
-                bottom: 2rem;
-              }
+&__link--musicdb:hover ~ &__img--musicdb-1 {
+    opacity: 0.2;
+    left: 40vw;
+}
+&__link--musicdb:hover ~ &__img--musicdb-2 {
+    opacity: 0.2;
+    bottom: 2rem;
+}
         </code></pre>
         <p class="portfolio-p">And that’s it! Nothing fancy!</p>
       </div>
@@ -125,10 +148,38 @@
           hover state for the mobile version I felt that I need to add something
           colorful and eyecatching.
         </p>
+        <div class="portfolio-hamburger">
+          <input
+            type="checkbox"
+            class="portfolio-hamburger__checkbox"
+            id="toggle"
+          />
+
+          <label for="toggle" class="portfolio-hamburger__button">
+            <span class="portfolio-hamburger__icon">
+              &nbsp;
+            </span>
+          </label>
+
+          <div class="portfolio-hamburger__background">&nbsp;</div>
+
+          <!-- <nav class="portfolio-hamburger__menu">
+            <ul class="portfolio-menu__list">
+              <li class="portfolio-menu__item">
+                <a href="#" class="portfolio-menu__link">Color splash!</a>
+              </li>
+            </ul>
+          </nav> -->
+        </div>
         <p class="portfolio-p">
-          Currently, I’m doing awesome SASS and CSS course by Jonas Schmedtmann.
-          I learned a checkbox trick from him. Using a hidden checkbox allows
-          creating a hamburger menu only by using CSS.
+          Currently, I’m doing awesome
+          <a
+            href="https://www.udemy.com/course/advanced-css-and-sass/"
+            class="portfolio-link"
+            >SASS and CSS course</a
+          >
+          by Jonas Schmedtmann. I learned a checkbox trick from him. Using a
+          hidden checkbox allows creating a hamburger menu only by using CSS.
         </p>
         <p class="portfolio-p">
           To make this work we have 4 elements inside hamburger div:
@@ -144,122 +195,139 @@
 
         <p class="portfolio-p">HTML</p>
         <pre><code class="language-html">
-            &lt;div class="hamburger mobile">
-                &lt;input type="checkbox" class="hamburger__checkbox" id="navi-toggle" />
-            
-                &lt;label for="navi-toggle" class="hamburger__button">
-                    &lt;span class="hamburger__icon">
-                    &nbsp;
-                    &lt;/span>
-                &lt;/label>
-            
-                &lt;div class="hamburger__background">&nbsp;&lt;/div>
-            
-                &lt;nav class="hamburger__menu">
-                    &lt;ul class="menu__list">
-                    &lt;li class="menu__item">
-                        &lt;a href="./pages/aboutme.html" class="menu__link">About me&lt;/a>
-                    &lt;/li>
-                    &lt;li class="menu__item">
-                        &lt;a href="./pages/contact.html" class="menu__link">Contact&lt;/a>
-                    &lt;/li>
-                    &lt;li class="menu__item">
-                        &lt;a href="#" class="menu__link">CV&lt;/a>
-                    &lt;/li>
-                    &lt;/ul>
-                &lt;/nav>
-            &lt;/div>
+&lt;div class="hamburger mobile">
+    &lt;input type="checkbox" class="hamburger__checkbox" id="navi-toggle" />
+
+    &lt;label for="navi-toggle" class="hamburger__button">
+        &lt;span class="hamburger__icon">
+          &amp;nbsp;
+        &lt;/span>
+    &lt;/label>
+
+    &lt;div class="hamburger__background">&amp;nbsp;&lt;/div>
+
+    &lt;nav class="hamburger__menu">
+        &lt;ul class="menu__list">
+            &lt;li class="menu__item">
+                &lt;a href="./pages/aboutme.html" class="menu__link">About me&lt;/a>
+            &lt;/li>
+            &lt;li class="menu__item">
+                &lt;a href="./pages/contact.html" class="menu__link">Contact&lt;/a>
+            &lt;/li>
+            &lt;li class="menu__item">
+                &lt;a href="#" class="menu__link">CV&lt;/a>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/nav>
+&lt;/div>
         </code></pre>
         <p class="portfolio-p">
-          So we have two states for each of these elements, initial when the
+          So there are two states for each of these elements, initial when the
           checkbox is unchecked and checked.
         </p>
         <p class="portfolio-p">Initial state:</p>
         <ul class="portfolio-ul">
           <li class="portfolio-li">- the button has gradient</li>
+          <pre><code class="language-css">
+&__button {
+    width: 6.4rem;
+    height: 6.4rem;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 1rem 3rem rgba($color-gray-dark, 0.3);
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(
+        $color-primary-blue,
+        $color-primary-red
+    );
+    top: 4.8rem;
+    right: 4.8rem;
+}
+          </code></pre>
           <li class="portfolio-li">
             - the background is a circle, has lower z-index than the button and
             slightly smaller size to be not visible
           </li>
+          <pre><code class="language-css">
+&__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    background-image: linear-gradient(
+      $color-primary-blue,
+      $color-primary-blue 50%,
+      $color-primary-red
+    );
+    z-index: 5;
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+          </code></pre>
           <li class="portfolio-li">- the menu is hidden</li>
+          <pre><code class="language-css">
+&__menu {
+    visibility: hidden;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+          </code></pre>
         </ul>
-        <pre><code class="language-css">
-            &__button {
-                @include navButton;
-                background-image: linear-gradient(
-                    $color-primary-blue,
-                    $color-primary-red
-                );
-                top: 4.8rem;
-                right: 4.8rem;
-            }
-              
-            &__background {
-                height: 6rem;
-                width: 6rem;
-                border-radius: 50%;
-                position: fixed;
-                top: 5rem;
-                right: 5rem;
-                background-image: linear-gradient(
-                  $color-primary-blue,
-                  $color-primary-blue 50%,
-                  $color-primary-red
-                );
-                z-index: 5;
-                transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
-            }
-              
-            &__menu {
-                visibility: hidden;
-                height: 100vh;
-                position: fixed;
-                top: 0;
-                left: 0;
-                z-index: 7;
-                opacity: 0;
-                width: 0;
-                transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-            }
-              
-            &__icon {
-                position: relative;
-                margin-top: 3.2rem;
-            }              
-        </code></pre>
+
         <p class="portfolio-p">Checked state:</p>
         <ul class="portfolio-ul">
           <li class="portfolio-li">- the button is white</li>
+          <pre><code class="language-css">
+&__checkbox:checked ~ &__button {
+    background-image: none;
+    background-color: $color-white;
+}
+          </code></pre>
           <li class="portfolio-li">- the background is massively scaled</li>
+          <pre><code class="language-css">
+&__checkbox:checked ~ &__background {
+    transform: scale(65);
+}
+          </code></pre>
           <li class="portfolio-li">- the menu links are visible</li>
+          <pre><code class="language-css">
+&__checkbox:checked ~ &__menu {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+}  
+          </code></pre>
         </ul>
-        <pre><code class="language-css">
-            &__checkbox:checked ~ &__button {
-                background-image: none;
-                background-color: $color-white;
-            }
 
-            &__checkbox:checked ~ &__background {
-                transform: scale(65);
-            }
-              
-            &__checkbox:checked ~ &__menu {
-                visibility: visible;
-                opacity: 1;
-                width: 100%;
-            }           
-        </code></pre>
         <p class="portfolio-p">Again, nothing really complicated.</p>
       </div>
       <div class="portfolio-section portfolio-section--gradient">
-        <h2 class="portfolio-heading portfolio-heading--secondary">
-          Gradient border
-        </h2>
+        <div class="gradient-box--portfolio">
+          <h2 class="portfolio-heading portfolio-heading--gradient">
+            Gradient border
+          </h2>
+        </div>
 
         <p class="portfolio-p">
           To be honest when I found that CSS has no simple way to create a
           gradient for borders I was surprised. Luckily for all of us, we have
-          https://css-tricks.com/. I used wrapper div for doing it, this article
+          <a href="https://css-tricks.com/" class="portfolio-link"
+            >https://css-tricks.com/</a
+          >. I used wrapper div for doing it,
+          <a
+            href="https://css-tricks.com/gradient-borders-in-css/"
+            class="portfolio-link"
+            >this article</a
+          >
           gives more examples.
         </p>
         <p class="portfolio-p">
@@ -267,40 +335,40 @@
         </p>
         <p class="portfolio-p">HTML</p>
         <pre><code class="language-html">         
-            &lt;div class="gradient-box">
-                &lt;a href="mailto:uvrubel@gmail.com" class="btn">Get in touch&lt;/a>
-            &lt;/div>
+&lt;div class="gradient-box">
+    &lt;a href="mailto:uvrubel@gmail.com" class="btn">Get in touch&lt;/a>
+&lt;/div>
         </code></pre>
         <p class="portfolio-p">CSS</p>
         <pre><code class="language-css">
-            .gradient-box {
-                display: inline-block;
-                position: relative;
-                padding: 1.2rem 1.6rem;
-                background: $color-white;
-                background-clip: padding-box;
-                border: solid 1px transparent;
-                border-radius: 15rem;
-                margin-top: 3.2rem;
-                cursor: pointer;
-              
-                &:before {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                  left: 0;
-                  z-index: -1;
-                  margin: -1px;
-                  border-radius: inherit;
-                  background: linear-gradient(
-                    to right bottom,
-                    $color-primary-blue,
-                    $color-primary-red
-                  );
-                }
-            }       
+.gradient-box {
+    display: inline-block;
+    position: relative;
+    padding: 1.2rem 1.6rem;
+    background: $color-white;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    border-radius: 15rem;
+    margin-top: 3.2rem;
+    cursor: pointer;
+  
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: linear-gradient(
+        to right bottom,
+        $color-primary-blue,
+        $color-primary-red
+      );
+    }
+}       
         </code></pre>
         <p class="portfolio-p">
           The negative margin of the before pseudo-element is the required
@@ -308,14 +376,16 @@
         </p>
         <p class="portfolio-p portfolio-p--last">
           Thanks for reading this far! You can find the complete source code for
-          this project here.
+          this project
+          <a
+            href="https://github.com/ulyavrubel/portfolio-v2"
+            class="portfolio-link"
+            >here</a
+          >.
         </p>
       </div>
     </div>
 
-    <p class="portfolio-p"></p>
-    <p class="portfolio-p"></p>
-    <p class="portfolio-p"></p>
     <footer class="wide-footer">
       <div class="mdb-section mdb-section--footer">
         <div class="mdb-section__left mdb-section__left--footer">
@@ -326,7 +396,9 @@
           </h4>
           <ul class="wide-footer__list">
             <li>
-              <a href="#" class="wide-footer__link">Personal Portfolio</a>
+              <a href="./musicdb.html" class="wide-footer__link"
+                >Music Database</a
+              >
             </li>
             <li>
               <a href="./recipe.html" class="wide-footer__link"
@@ -334,7 +406,12 @@
               >
             </li>
             <li>
-              <a href="#" class="wide-footer__link">API & Microservices</a>
+              <a
+                href="https://freecodecamp-api-projects.herokuapp.com/"
+                class="wide-footer__link"
+                target="_blank"
+                >API & Microservices</a
+              >
             </li>
           </ul>
         </div>
