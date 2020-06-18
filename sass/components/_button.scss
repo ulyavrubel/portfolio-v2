@@ -103,6 +103,18 @@
       }
     }
 
+    &--api {
+      &,
+      &:link,
+      &:visited {
+        background-color: $color-white;
+        color: $color-gray-dark;
+      }
+      &:hover {
+        color: $color-gray-light;
+      }
+    }
+
     &--portfolio {
       &,
       &:link,

@@ -199,6 +199,23 @@ body {
     .portfolio-p:first-of-type {
       margin-top: 6.4rem; } }
 
+.api-heading--primary {
+  font-size: 3.6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .api-heading--primary {
+      font-size: 3rem; } }
+
+.api-heading--secondary {
+  letter-spacing: 0.03em;
+  font-size: 2.4rem;
+  margin: 3.6rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .api-heading--secondary {
+      font-size: 2rem; } }
+
+.api-p {
+  margin-top: 2.4rem; }
+
 .u-center-text {
   display: block !important;
   text-align: center !important; }
@@ -273,6 +290,13 @@ body {
 
 .btn__project--recipe:hover {
   color: #ff4133; }
+
+.btn__project--api, .btn__project--api:link, .btn__project--api:visited {
+  background-color: white;
+  color: #3c3c3c; }
+
+.btn__project--api:hover {
+  color: #828181; }
 
 .btn__project--portfolio, .btn__project--portfolio:link, .btn__project--portfolio:visited {
   background-image: linear-gradient(to right bottom, #ff4133, #1f28cf);
@@ -1204,3 +1228,65 @@ body {
     margin: -2px;
     border-radius: inherit;
     background: linear-gradient(to right bottom, #1f28cf, #ff4133); }
+
+.api-section {
+  font-size: 2rem;
+  line-height: 1.6;
+  padding-left: 19.2rem; }
+  @media only screen and (max-width: 75em) {
+    .api-section {
+      padding: 0 12.8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .api-section {
+      padding: 0 3.2rem; } }
+  .api-section--header {
+    background-color: #3c3c3c;
+    color: white;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%); }
+  .api-section--about {
+    max-width: 70rem; }
+    @media only screen and (max-width: 75em) {
+      .api-section--about {
+        max-width: auto; } }
+    .api-section--about p {
+      margin-top: 6.4rem; }
+  .api-section--projects {
+    padding-bottom: 12.8rem; }
+
+.api-header {
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -40%); }
+
+.api-ul {
+  list-style-type: none; }
+
+.api-li:first-child {
+  margin-top: 0.8rem; }
+
+.api-link, .api-link:link, .api-link:visited {
+  text-decoration: none;
+  color: #ff4133; }
+
+.api-project {
+  display: flex;
+  flex-direction: row;
+  max-width: 90rem;
+  margin-top: 3.6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .api-project {
+      flex-direction: column;
+      max-width: auto; } }
+  .api-project__header {
+    min-width: 38.4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .api-project__header {
+        min-width: auto; } }
+  .api-project__link, .api-project__link:link, .api-project__link:visited {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #3c3c3c; }
+  .api-project__link:hover {
+    color: #828181; }
