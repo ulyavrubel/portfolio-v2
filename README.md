@@ -1,4 +1,4 @@
-# [ulya.dev](ulya.dev)
+# [ulya.dev](https://ulya.dev/)
 
 My technical portfolio built with only HTML, SASS, JS hosted with Vercel.
 
