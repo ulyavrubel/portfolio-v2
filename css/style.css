@@ -658,12 +658,12 @@ body {
   align-items: center; }
   @media only screen and (max-width: 56.25em) {
     .container {
+      height: auto;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center; } }
   @media only screen and (max-width: 37.5em) {
     .container {
-      height: auto;
       padding: 6.4rem; } }
 
 .header {
