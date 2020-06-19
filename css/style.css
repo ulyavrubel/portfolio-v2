@@ -758,8 +758,8 @@ body {
     opacity: 0.2;
     transform: scaleX(0.9) scaleY(0.9); }
 
-#loadOverlay {
-  display: none; }
+#afterCSS {
+  display: block !important; }
 
 .aboutme-container {
   max-width: 89.6rem;
