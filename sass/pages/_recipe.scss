@@ -63,58 +63,66 @@
   }
 }
 
+// .recipe-img {
+//   height: 51.2rem;
+//   visibility: hidden;
+
+//   @include respond(tab-land) {
+//     height: 45rem;
+//   }
+
+//   @include respond(phone) {
+//     height: auto;
+//     width: 30vw;
+//   }
+
+//   &:nth-child(odd) {
+//     margin: 0 3.2rem;
+//     @include respond(phone) {
+//       margin: 0 0.5rem;
+//     }
+//   }
+
+//   &--1 {
+//     animation-name: moveInLeft;
+//     animation-duration: 1s;
+//     animation-timing-function: ease-out;
+//     visibility: visible;
+//     @include respond(tab-port) {
+//       padding-bottom: 12.8rem;
+//       animation-name: moveInBottom;
+//     }
+//   }
+
+//   &--2 {
+//     animation-name: emersion;
+//     animation-duration: 1s;
+//     animation-timing-function: ease-out;
+//     visibility: visible;
+//     @include respond(tab-port) {
+//       padding: 6.4rem 0;
+//       animation-name: moveInBottom;
+//       animation-delay: 0.2s;
+//     }
+//   }
+
+//   &--3 {
+//     animation-name: moveInRight;
+//     animation-duration: 1s;
+//     animation-timing-function: ease-out;
+//     visibility: visible;
+//     @include respond(tab-port) {
+//       padding-top: 12.8rem;
+//       animation-name: moveInBottom;
+//       animation-delay: 0.4s;
+//     }
+//   }
+// }
+
 .recipe-img {
   height: 51.2rem;
-  visibility: hidden;
-
-  @include respond(tab-land) {
-    height: 45rem;
-  }
-
-  @include respond(phone) {
-    height: auto;
-    width: 30vw;
-  }
 
   &:nth-child(odd) {
     margin: 0 3.2rem;
-    @include respond(phone) {
-      margin: 0 0.5rem;
-    }
-  }
-
-  &--1 {
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    visibility: visible;
-    @include respond(tab-port) {
-      padding-bottom: 12.8rem;
-      animation-name: moveInBottom;
-    }
-  }
-
-  &--2 {
-    animation-name: emersion;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    visibility: visible;
-    @include respond(tab-port) {
-      padding: 6.4rem 0;
-      animation-name: moveInBottom;
-      animation-delay: 0.2s;
-    }
-  }
-
-  &--3 {
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    visibility: visible;
-    @include respond(tab-port) {
-      padding-top: 12.8rem;
-      animation-name: moveInBottom;
-      animation-delay: 0.4s;
-    }
   }
 }

@@ -1124,49 +1124,9 @@ body {
     margin-top: 0.8rem; }
 
 .recipe-img {
-  height: 51.2rem;
-  visibility: hidden; }
-  @media only screen and (max-width: 75em) {
-    .recipe-img {
-      height: 45rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .recipe-img {
-      height: auto;
-      width: 30vw; } }
+  height: 51.2rem; }
   .recipe-img:nth-child(odd) {
     margin: 0 3.2rem; }
-    @media only screen and (max-width: 37.5em) {
-      .recipe-img:nth-child(odd) {
-        margin: 0 0.5rem; } }
-  .recipe-img--1 {
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    visibility: visible; }
-    @media only screen and (max-width: 56.25em) {
-      .recipe-img--1 {
-        padding-bottom: 12.8rem;
-        animation-name: moveInBottom; } }
-  .recipe-img--2 {
-    animation-name: emersion;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    visibility: visible; }
-    @media only screen and (max-width: 56.25em) {
-      .recipe-img--2 {
-        padding: 6.4rem 0;
-        animation-name: moveInBottom;
-        animation-delay: 0.2s; } }
-  .recipe-img--3 {
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    visibility: visible; }
-    @media only screen and (max-width: 56.25em) {
-      .recipe-img--3 {
-        padding-top: 12.8rem;
-        animation-name: moveInBottom;
-        animation-delay: 0.4s; } }
 
 .portfolio-container {
   max-width: 70rem;
