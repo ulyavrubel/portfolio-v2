@@ -338,7 +338,8 @@ body {
       .hamburger__checkbox {
         display: none; }
       .hamburger__checkbox:checked ~ .hamburger__background {
-        transform: scale(65); } }
+        transform: scale(65);
+        position: fixed; } }
     @media only screen and (max-width: 56.25em) and (max-width: 37.5em) {
       .hamburger__checkbox:checked ~ .hamburger__background {
         transform: scale(35); } }
@@ -349,7 +350,8 @@ body {
         width: 100%; }
       .hamburger__checkbox:checked ~ .hamburger__button {
         background-image: none;
-        background-color: white; }
+        background-color: white;
+        position: fixed; }
       .hamburger__button {
         width: 6.4rem;
         height: 6.4rem;
@@ -1125,8 +1127,27 @@ body {
 
 .recipe-img {
   height: 51.2rem; }
+  @media only screen and (max-width: 75em) {
+    .recipe-img {
+      height: 45rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .recipe-img {
+      height: auto;
+      width: 30vw; } }
   .recipe-img:nth-child(odd) {
     margin: 0 3.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .recipe-img:nth-child(odd) {
+        margin: 0 0.5rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .recipe-img--1 {
+      padding-bottom: 12.8rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .recipe-img--2 {
+      padding: 6.4rem 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .recipe-img--3 {
+      padding-top: 12.8rem; } }
 
 .portfolio-container {
   max-width: 70rem;

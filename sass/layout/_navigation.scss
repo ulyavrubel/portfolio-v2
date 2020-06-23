@@ -49,6 +49,7 @@
 
     &__checkbox:checked ~ &__background {
       transform: scale(65);
+      position: fixed;
       @include respond(phone) {
         transform: scale(35);
       }
@@ -63,6 +64,7 @@
     &__checkbox:checked ~ &__button {
       background-image: none;
       background-color: $color-white;
+      position: fixed;
     }
 
     &__button {
