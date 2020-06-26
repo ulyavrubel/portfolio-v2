@@ -274,21 +274,6 @@
       padding: 6.4rem 0;
     }
   }
-
-  &--footer {
-    align-items: flex-start;
-    padding: 0;
-  }
-
-  &__left--footer {
-    @include respond(phone) {
-      position: relative;
-    }
-  }
-
-  &__right--footer {
-    text-align: right;
-  }
 }
 
 .intro-img {

@@ -139,3 +139,39 @@
     }
   }
 }
+
+.ft-section {
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include respond(phone) {
+    padding: 6.4rem 4.8rem;
+    display: block;
+  }
+
+  &__left,
+  &__right {
+    width: 50vw;
+
+    @include respond(phone) {
+      width: auto;
+    }
+  }
+
+  &--footer {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  &__left--footer {
+    @include respond(phone) {
+      position: relative;
+    }
+  }
+
+  &__right--footer {
+    text-align: right;
+  }
+}
