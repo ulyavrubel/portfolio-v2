@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "C:/Users/Ульяна/.node_modules_global/live-server.cmd",
+    "devserver": "http-server -p 7777 -c-1 -o",
     "start": "npm-run-all --parallel devserver watch:sass",
     "compile:sass": "node-sass sass/main.scss css/style.comp.css",
     "compileHome:sass": "node-sass sass/home.scss css/home.comp.css",
