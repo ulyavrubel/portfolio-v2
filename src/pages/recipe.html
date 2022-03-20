@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-159039329-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-159039329-1");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="title" content="Ulyana Sichkar | front-end developer" />
+    <meta
+      name="description"
+      content="Ulyana Sichkar is a web-developer based in Moscow, Russia who specializes in building web applications with React"
+    />
+    <meta
+      name="keywords"
+      content="Ulyana Sichkar, Ulyana, Sichkar, ulyavrubel, ulyanas19, front-end developer, web developer, javascript, reactjs"
+    />
+    <title>Recipe Generator</title>
+  </head>
+  <body>
+    <div class="back-navigation">
+      <a href="../index.html">
+        <div class="back-navigation__button back-navigation__button--white">
+          <img
+            src="../img/recipe/back.svg"
+            alt="arrow back"
+            class="back-navigation__img"
+          /></div
+      ></a>
+    </div>
+    <div class="recipe-section recipe-section--header">
+      <header class="recipe-header">
+        <h1 class="recipe-heading--primary">
+          Recipe Generator created with <br />
+          React, Bootstrap, Firebase Auth, and TheMealDB API.
+        </h1>
+        <div class="recipe-button-box">
+          <a
+            href="https://ulyavrubel.github.io/recipeApp/"
+            class="btn btn__project btn__project--recipe"
+            target="_blank"
+            >Live</a
+          >
+
+          <a
+            href="https://github.com/ulyavrubel/recipeApp"
+            class="btn btn__project btn__project--recipe"
+            target="_blank"
+            >GitHub</a
+          >
+        </div>
+        <video class="recipe-video" controls poster="../img/recipe/poster.PNG">
+          <source src="../img/recipe/recipe.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </header>
+    </div>
+    <div class="recipe-section recipe-section--desc">
+      <div class="recipe-section__text">
+        <p class="recipe-p recipe-p--desc">
+          Random recipe generator is a simple app created with React, TheMealDb
+          API, and Firebase authentication. I designed it with Bootstrap.
+        </p>
+        <p class="recipe-p recipe-p--desc">
+          This project was a result of my very first steps in learning React. I
+          was looking for an API to practice data fetching. When I found
+          TheMealDb I was excited to build something that I can use in my daily
+          life for cooking inspiration.
+        </p>
+        <p class="recipe-p recipe-p--desc">
+          Later on, I added category filter and Firebase authentication to allow
+          users to add selected recipes to favorites.
+        </p>
+      </div>
+    </div>
+    <div class="recipe-section recipe-section--features">
+      <div class="recipe-section__text">
+        <p class="recipe-p recipe-p--features">
+          Features:
+        </p>
+        <ul class="recipe-list">
+          <li class="recipe-list__item">
+            - Get a random recipe for the selected category
+          </li>
+          <li class="recipe-list__item">
+            - Sign up, log in, reset forgotten password
+          </li>
+          <li class="recipe-list__item">
+            - Add a recipe to favorites
+          </li>
+          <li class="recipe-list__item">
+            - Delete a recipe from favorites
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="recipe-section recipe-section--mockups" id="mockups">
+      <div class="recipe-img__container">
+        <img
+          src="../img/recipe/recipe-mockup-1-s.png"
+          srcset="../img/recipe/recipe-mockup-1@2x.png 2x"
+          alt="iphone mockup"
+          class="recipe-img recipe-img--1"
+          id="img1"
+        />
+      </div>
+      <div class="recipe-img__container">
+        <img
+          src="../img/recipe/recipe-mockup-2-s.png"
+          srcset="../img/recipe/recipe-mockup-2@2x.png 2x"
+          alt="iphone mockup"
+          class="recipe-img recipe-img--2"
+          id="img2"
+        />
+      </div>
+      <div class="recipe-img__container">
+        <img
+          src="../img/recipe/recipe-mockup-3-s.png"
+          srcset="../img/recipe/recipe-mockup-3@2x.png 2x"
+          alt="iphone mockup"
+          class="recipe-img recipe-img--3"
+          id="img3"
+        />
+      </div>
+    </div>
+
+    <footer class="wide-footer">
+      <div class="ft-section ft-section--footer">
+        <div class="ft-section__left ft-section__left--footer">
+          <h4
+            class="mdb-heading--tertiary mdb-heading--tertiary--white wide-footer__heading"
+          >
+            <span>Next project</span>
+          </h4>
+          <ul class="wide-footer__list">
+            <li>
+              <a href="./musicdb.html" class="wide-footer__link"
+                >Music Database</a
+              >
+            </li>
+            <li>
+              <a href="./portfolio.html" class="wide-footer__link"
+                >Personal Portfolio</a
+              >
+            </li>
+
+            <li>
+              <a href="./api.html" class="wide-footer__link"
+                >API & Microservices</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="ft-section__right ft-section__right--footer">
+          <ul class="wide-footer__list wide-footer__list--nav">
+            <li class="wide-footer__navigation-item">
+              <a href="../index.html" class="wide-footer__navigation-link">Home</a>
+            </li>
+            <li class="wide-footer__navigation-item">
+              <a href="./aboutme.html" class="wide-footer__navigation-link"
+                >About me</a
+              >
+            </li>
+            <li class="wide-footer__navigation-item">
+              <a href="./contact.html" class="wide-footer__navigation-link"
+                >Contact</a
+              >
+            </li>
+            <li class="wide-footer__navigation-item">
+              <a
+                href="../file/CV Ulyana Sichkar Frontend Developer.pdf"
+                class="wide-footer__navigation-link"
+                download
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="ft-section ft-section--footer">
+        <div class="ft-section__left ft-section__left--footer">
+          <div class="footer__icons">
+            <a href="https://github.com/ulyavrubel" class="footer__icon-link">
+              <img
+                src="../img/github.svg"
+                class="footer__icon footer__icon--white"
+                width="24px"
+                alt="github
+                      icon"
+            /></a>
+            <a href="https://twitter.com/ulyanas19" class="footer__icon-link">
+              <img
+                src="../img/twitter.svg"
+                class="footer__icon footer__icon--white"
+                width="24px"
+                alt="github icon"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/ulyanasichkar/"
+              class="footer__icon-link"
+            >
+              <img
+                src="../img/linkedin.svg"
+                class="footer__icon footer__icon--white"
+                width="24px"
+                alt="github icon"
+            /></a>
+          </div>
+        </div>
+        <div class="ft-section__right ft-section__right--footer">
+          <p class="footer__par footer__par--right">
+            Designed and built by
+            <a
+              class="footer__link footer__link--white"
+              href="https://github.com/ulyavrubel"
+              >Ulyana Sichkar</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+  </body>
+</html>

@@ -4,27 +4,9 @@
   "description": "my personal portfolio",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "C:/Users/Ульяна/.node_modules_global/live-server.cmd",
-    "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "compileHome:sass": "node-sass sass/home.scss css/home.comp.css",
-    "compileAboutme:sass": "node-sass sass/aboutme.scss css/aboutme.comp.css",
-    "compileApi:sass": "node-sass sass/api.scss css/api.comp.css",
-    "compileContact:sass": "node-sass sass/contact.scss css/contact.comp.css",
-    "compileMusicdb:sass": "node-sass sass/musicdb.scss css/musicdb.comp.css",
-    "compilePortfolio:sass": "node-sass sass/portfolio.scss css/portfolio.comp.css",
-    "compileRecipe:sass": "node-sass sass/recipe.scss css/recipe.comp.css",
-    "compileAll:sass": "npm-run-all compileHome:sass compileAboutme:sass compileApi:sass compileContact:sass compileMusicdb:sass compilePortfolio:sass compileRecipe:sass",
-    "compressHome:css": "node-sass css/home.comp.css css/home.css --output-style compressed",
-    "compressAboutme:css": "node-sass css/aboutme.comp.css css/aboutme.css --output-style compressed",
-    "compressApi:css": "node-sass css/api.comp.css css/api.css --output-style compressed",
-    "compressContact:css": "node-sass css/contact.comp.css css/contact.css --output-style compressed",
-    "compressMusicdb:css": "node-sass css/musicdb.comp.css css/musicdb.css --output-style compressed",
-    "compressPortfolio:css": "node-sass css/portfolio.comp.css css/portfolio.css --output-style compressed",
-    "compressRecipe:css": "node-sass css/recipe.comp.css css/recipe.css --output-style compressed",
-    "compressAll:css": "npm-run-all compressHome:css compressAboutme:css compressApi:css compressContact:css compressMusicdb:css compressPortfolio:css compressRecipe:css",
-    "build:css": "npm-run-all compileAll:sass compressAll:css"
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open --mode=development"
   },
   "repository": {
     "type": "git",
@@ -37,7 +19,14 @@
   },
   "homepage": "https://github.com/ulyavrubel/portfolio-v2#readme",
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "npm-run-all": "^4.1.5"
+    "css-loader": "^6.7.1",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4",
+    "sass": "^1.49.9"
   }
 }
