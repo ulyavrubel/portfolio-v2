@@ -1,0 +1,166 @@
+<!doctype html><html lang="en"><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-159039329-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-159039329-1")</script><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap&subset=latin-ext" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/><meta name="title" content="Ulyana Sichkar | front-end developer"/><meta name="description" content="Ulyana Sichkar is a web-developer based in Moscow, Russia who specializes in building web applications with React"/><meta name="keywords" content="Ulyana Sichkar, Ulyana, Sichkar, ulyavrubel, ulyanas19, front-end developer, web developer, javascript, reactjs"/><title>Portfolio</title><link rel="icon" href="../icon.png"><script defer="defer" src="../portfolio.5345589de4d9b409cdf6.js"></script></head><body><div class="back-navigation"><a href="../index.html"><div class="back-navigation__button back-navigation__button--red"><img src="../4a85fdf8e748e579086f.svg" alt="arrow back" class="back-navigation__img"/></div></a></div><div class="portfolio-container"><div class="portfolio-section portfolio-section--intro"><h1 class="portfolio-heading portfolio-heading--primary">Personal Portfolio</h1><a href="https://github.com/ulyavrubel/portfolio-v2" class="btn btn__project btn__project--portfolio" target="_blank">GitHub</a><p class="portfolio-p">Trying to keep things simple and minimalistic I still wanted my portfolio to be unique and memorable.</p><p class="portfolio-p">While doing #100DaysOfCode challenge and tracking my day-to-day progress on this project I got some positive feedback. That’s why I decided to share some of the techniques I used for building this portfolio.</p></div><div class="portfolio-section portfolio-section--images"><h2 class="portfolio-heading portfolio-heading--secondary">Images appear on <a href="#portfolio-link--img" class="portfolio-link--img" id="portfolio-link--img">link</a> hover <img src="../062b482d2246268beece.svg" alt="hi message icon" class="portfolio-img" width="96px"/></h2><p class="portfolio-p">To get this effect I used absolutely positioned images and CSS combinators. Let’s see how images appear for the Music Database link on the home page.</p><p class="portfolio-p">HTML:</p><pre><code class="language-html">
+&lt;li class="projects__item">
+    &lt;a
+    href="./pages/musicdb.html"
+    class="projects__link projects__link--musicdb"
+    >Music Database >>&lt;/a
+    >
+    &lt;img
+    class="projects__img projects__img--musicdb-1"
+    src="img/musicdb-mockup-1.png"
+    alt="iphone mockup"
+    />
+    &lt;img
+    class="projects__img projects__img--musicdb-2"
+    src="img/musicdb-mockup-2.png"
+    alt="iphone mockup"
+    />
+&lt;/li>
+        </code></pre><p class="portfolio-p">CSS for img initial state (who is not familiar with SCSS syntax "&" replaces parent selector, in this case ".projects" and ".projects__img" for nested elements):</p><pre><code class="language-css">
+&__img {
+    position: absolute;
+    z-index: -1;
+    height: 70vh;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+
+    &--musicdb-1 {
+      left: -30vw;
+      bottom: 2rem;
+    }
+
+    &--musicdb-2 {
+      left: 75vw;
+      bottom: 100vh;
+    }
+}
+        </code></pre><p class="portfolio-p">As images are the link’s siblings I used general sibling selector tilde (~). Thanks to <a href="https://dev.to/ladybug/css-cheat-sheets-3ee0" class="portfolio-link">Ladybug’s CSS Combinators Cheat Sheet</a>!</p><p class="portfolio-p">Changing left and bottom values on hover give a visual effect of moving from respective sides.</p><p class="portfolio-p">CSS for link’s hover state:</p><pre><code class="language-css">
+&__link--musicdb:hover ~ &__img--musicdb-1 {
+    opacity: 0.2;
+    left: 40vw;
+}
+&__link--musicdb:hover ~ &__img--musicdb-2 {
+    opacity: 0.2;
+    bottom: 2rem;
+}
+        </code></pre><p class="portfolio-p">And that’s it! Nothing fancy!</p></div><div class="portfolio-section portfolio-section--hamburger"><h2 class="portfolio-heading portfolio-heading--secondary">Hamburger menu for mobile version</h2><p class="portfolio-p">Having a white background and not possible to see images on links’ hover state for the mobile version I felt that I need to add something colorful and eyecatching.</p><div class="portfolio-hamburger"><input type="checkbox" class="portfolio-hamburger__checkbox" id="toggle"/> <label for="toggle" class="portfolio-hamburger__button"><span class="portfolio-hamburger__icon">&nbsp;</span></label><div class="portfolio-hamburger__background">&nbsp;</div></div><p class="portfolio-p">Currently, I’m doing awesome <a href="https://www.udemy.com/course/advanced-css-and-sass/" class="portfolio-link">SASS and CSS course</a> by Jonas Schmedtmann. I learned a checkbox trick from him. Using a hidden checkbox allows creating a hamburger menu only by using CSS.</p><p class="portfolio-p">To make this work there are 4 elements inside hamburger div:</p><ul class="portfolio-ul"><li class="portfolio-li">- checkbox itself</li><li class="portfolio-li">- button connected with the checkbox by for and id</li><li class="portfolio-li">- background div under the icon</li><li class="portfolio-li">- menu links</li></ul><p class="portfolio-p">HTML</p><pre><code class="language-html">
+&lt;div class="hamburger mobile">
+    &lt;input type="checkbox" class="hamburger__checkbox" id="navi-toggle" />
+
+    &lt;label for="navi-toggle" class="hamburger__button">
+        &lt;span class="hamburger__icon">
+          &amp;nbsp;
+        &lt;/span>
+    &lt;/label>
+
+    &lt;div class="hamburger__background">&amp;nbsp;&lt;/div>
+
+    &lt;nav class="hamburger__menu">
+        &lt;ul class="menu__list">
+            &lt;li class="menu__item">
+                &lt;a href="./pages/aboutme.html" class="menu__link">About me&lt;/a>
+            &lt;/li>
+            &lt;li class="menu__item">
+                &lt;a href="./pages/contact.html" class="menu__link">Contact&lt;/a>
+            &lt;/li>
+            &lt;li class="menu__item">
+                &lt;a href="#" class="menu__link">CV&lt;/a>
+            &lt;/li>
+        &lt;/ul>
+    &lt;/nav>
+&lt;/div>
+        </code></pre><p class="portfolio-p">So there are two states for each of these elements, initial when the checkbox is unchecked and checked.</p><p class="portfolio-p">Initial state:</p><ul class="portfolio-ul"><li class="portfolio-li">- the button has gradient</li><pre><code class="language-css">
+&__button {
+    width: 6.4rem;
+    height: 6.4rem;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 1rem 3rem rgba($color-gray-dark, 0.3);
+    text-align: center;
+    cursor: pointer;
+    background-image: linear-gradient(
+        $color-primary-blue,
+        $color-primary-red
+    );
+    top: 4.8rem;
+    right: 4.8rem;
+}
+          </code></pre><li class="portfolio-li">- the background is a circle, has lower z-index than the button and slightly smaller size to be not visible</li><pre><code class="language-css">
+&__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    background-image: linear-gradient(
+      $color-primary-blue,
+      $color-primary-blue 50%,
+      $color-primary-red
+    );
+    z-index: 5;
+    transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+          </code></pre><li class="portfolio-li">- the menu is hidden</li><pre><code class="language-css">
+&__menu {
+    visibility: hidden;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 7;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+          </code></pre></ul><p class="portfolio-p">Checked state:</p><ul class="portfolio-ul"><li class="portfolio-li">- the button is white</li><pre><code class="language-css">
+&__checkbox:checked ~ &__button {
+    background-image: none;
+    background-color: $color-white;
+}
+          </code></pre><li class="portfolio-li">- the background is massively scaled</li><pre><code class="language-css">
+&__checkbox:checked ~ &__background {
+    transform: scale(65);
+}
+          </code></pre><li class="portfolio-li">- the menu links are visible</li><pre><code class="language-css">
+&__checkbox:checked ~ &__menu {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+}
+          </code></pre></ul><p class="portfolio-p">Again, nothing really complicated.</p></div><div class="portfolio-section portfolio-section--gradient"><div class="gradient-box--portfolio"><h2 class="portfolio-heading portfolio-heading--gradient">Gradient border</h2></div><p class="portfolio-p">To be honest when I found that CSS has no simple way to create a gradient for borders I was surprised. Luckily for all of us, we have <a href="https://css-tricks.com/" class="portfolio-link">https://css-tricks.com/</a>. I used wrapper div for doing it, <a href="https://css-tricks.com/gradient-borders-in-css/" class="portfolio-link">this article</a> gives more examples.</p><p class="portfolio-p">That’s how I implemented it for Get in Touch button on the main page.</p><p class="portfolio-p">HTML</p><pre><code class="language-html">
+&lt;div class="gradient-box">
+    &lt;a href="mailto:uvrubel@gmail.com" class="btn">Get in touch&lt;/a>
+&lt;/div>
+        </code></pre><p class="portfolio-p">CSS</p><pre><code class="language-css">
+.gradient-box {
+    display: inline-block;
+    position: relative;
+    padding: 1.2rem 1.6rem;
+    background: $color-white;
+    background-clip: padding-box;
+    border: solid 1px transparent;
+    border-radius: 15rem;
+    margin-top: 3.2rem;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: linear-gradient(
+        to right bottom,
+        $color-primary-blue,
+        $color-primary-red
+      );
+    }
+}
+        </code></pre><p class="portfolio-p">The negative margin of the before pseudo-element is the required border.</p><p class="portfolio-p portfolio-p--last">Thanks for reading this far! You can find the complete source code for this project <a href="https://github.com/ulyavrubel/portfolio-v2" class="portfolio-link">here</a>.</p></div></div><footer class="wide-footer"><div class="ft-section ft-section--footer"><div class="ft-section__left ft-section__left--footer"><h4 class="mdb-heading--tertiary mdb-heading--tertiary--white wide-footer__heading"><span>Next project</span></h4><ul class="wide-footer__list"><li><a href="./musicdb.html" class="wide-footer__link">Music Database</a></li><li><a href="./recipe.html" class="wide-footer__link">Recipe Generator</a></li><li><a href="./api.html" class="wide-footer__link">API & Microservices</a></li></ul></div><div class="ft-section__right ft-section__right--footer"><ul class="wide-footer__list wide-footer__list--nav"><li class="wide-footer__navigation-item"><a href="../index.html" class="wide-footer__navigation-link">Home</a></li><li class="wide-footer__navigation-item"><a href="./aboutme.html" class="wide-footer__navigation-link">About me</a></li><li class="wide-footer__navigation-item"><a href="./contact.html" class="wide-footer__navigation-link">Contact</a></li><li class="wide-footer__navigation-item"><a href="../af35b440760219adbade.pdf" class="wide-footer__navigation-link" download>Resume</a></li></ul></div></div><div class="ft-section ft-section--footer"><div class="ft-section__left ft-section__left--footer"><div class="footer__icons"><a href="https://github.com/ulyavrubel" class="footer__icon-link"><img src="../07f1233b68a84819ef24.svg" class="footer__icon footer__icon--white" width="24px" alt="github
+                      icon"/></a><a href="https://twitter.com/ulyanas19" class="footer__icon-link"><img src="../dfef8b79e776e308d927.svg" class="footer__icon footer__icon--white" width="24px" alt="github icon"/></a><a href="https://www.linkedin.com/in/ulyanasichkar/" class="footer__icon-link"><img src="../47bb9227955d0a23acbf.svg" class="footer__icon footer__icon--white" width="24px" alt="github icon"/></a></div></div><div class="ft-section__right ft-section__right--footer"><p class="footer__par footer__par--right">Designed and built by <a class="footer__link footer__link--white" href="https://github.com/ulyavrubel">Ulyana Sichkar</a></p></div></div></footer><script src="../4dd2cba4b16b4eb059e7.js"></script></body></html>
