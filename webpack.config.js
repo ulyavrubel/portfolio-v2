@@ -31,7 +31,7 @@ const pages = [
 module.exports = {
     entry: {
         index: './src/index.js',
-        ...Object.fromEntries(pages.map(({name}) => [name, `./src/js/${name}`]))
+        ...Object.fromEntries(pages.map(({ name }) => [name, `./src/js/${name}`]))
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -51,14 +51,14 @@ module.exports = {
             chunks: ['index'],
             favicon: './src/img/icon.png'
         }),
-        ...pages.map(({name, title}) => new HtmlWebpackPlugin({
+        ...pages.map(({ name, title }) => new HtmlWebpackPlugin({
             title,
             template: `./src/pages/${name}.html`,
             filename: `pages/${name}.html`,
             chunks: [name],
             favicon: './src/img/icon.png'
         }))
-       ,
+        ,
     ],
     module: {
         rules: [
@@ -99,6 +99,13 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif|pdf)$/i,
                 type: 'asset/resource',
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ],
     },
