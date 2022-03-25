@@ -1,0 +1,334 @@
+@import '../base.scss';
+
+.mdb-container {
+  background-image: url('../../img/musicdb/polygon1.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+
+  @include respond(big-desktop) {
+    background-size: 65%;
+  }
+  @include respond(tab-port) {
+    background-image: none;
+  }
+}
+
+.mdb-header {
+  display: flex;
+  flex-direction: row;
+
+  @include respond(tab-port) {
+    display: block;
+  }
+
+  &__left {
+    width: 50vw;
+    align-self: center;
+    margin-left: 19.2rem;
+    align-self: flex-end;
+    padding-bottom: 12.8rem;
+
+    @include respond(big-desktop) {
+      padding-bottom: 25.6rem;
+    }
+
+    @include respond(tab-land) {
+      margin-left: 6.4rem;
+    }
+
+    @include respond(tab-port) {
+      width: 100vw;
+      margin: 0;
+      padding: 19.2rem 3.2rem 3.2rem 3.2rem;
+      text-align: center;
+    }
+  }
+
+  &__right {
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+
+    @include respond(phone) {
+      width: 95vw;
+      margin: 3.2rem auto 0 auto;
+    }
+  }
+
+  &__img {
+    height: 100vh;
+    width: auto;
+    max-height: 1100px;
+
+    @include respond(tab-port) {
+      width: 80vw;
+      height: auto;
+      margin: 6.4rem auto 0 auto;
+    }
+    @include respond(phone) {
+      margin-top: 3.2rem;
+    }
+  }
+}
+.mdb-button-box {
+  margin-top: 3.2rem;
+
+  @include respond(tab-port) {
+    margin-top: 6.4rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 3.2rem;
+  }
+}
+
+.mdb-arrow-down {
+  position: absolute;
+  bottom: 6.4rem;
+  left: 6.4rem;
+
+  @include respond(tab-land) {
+    bottom: 2.4rem;
+  }
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.mdb-section {
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include respond(phone) {
+    padding: 6.4rem 4.8rem;
+    display: block;
+  }
+
+  &__left,
+  &__right {
+    width: 50vw;
+
+    @include respond(phone) {
+      width: auto;
+    }
+  }
+
+  &--intro {
+    @include respond(phone) {
+      margin-top: 4.8rem;
+    }
+  }
+
+  &__left--intro,
+  &__right--intro {
+    width: 35vw;
+
+    @include respond(tab-land) {
+      width: 50vw;
+    }
+
+    @include respond(phone) {
+      width: auto;
+    }
+  }
+
+  &--design {
+    margin-top: -12rem;
+    background-image: url('../../img/musicdb/polygon2.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 90rem;
+
+    @include respond(tab-land) {
+      margin-top: 0;
+      height: auto;
+    }
+
+    @include respond(tab-port) {
+      background-image: none;
+      background-color: $color-gray-dark;
+      padding: 4.8rem;
+    }
+
+    @include respond(phone) {
+      background-image: url('../../img/musicdb/polygon1-mobile.svg');
+      background-color: $color-white;
+      padding: 19.2rem 4.8rem 0 4.8rem;
+    }
+  }
+
+  &__left--design {
+    margin-left: 9.6rem;
+    @include respond(tab-land) {
+      margin-left: 0;
+    }
+  }
+
+  &__right--design {
+    text-align: center;
+    @include respond(tab-land) {
+      min-height: 50rem;
+    }
+    @include respond(tab-port) {
+      min-height: auto;
+      margin-top: 0rem;
+    }
+    @include respond(phone) {
+      margin-top: 30rem;
+    }
+  }
+
+  &--stack {
+    @include respond(big-desktop) {
+      padding: 9.6rem 6.4rem;
+    }
+  }
+
+  &__left--stack,
+  &__right--stack {
+    padding: 0 6.4rem;
+
+    @include respond(phone) {
+      padding: 2.4rem 0;
+    }
+    @include respond(tab-port) {
+      padding: 3.2rem;
+    }
+  }
+
+  &--schema {
+    display: block;
+    text-align: center;
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &--features {
+    background-image: url('../../img/musicdb/polygon3.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    align-items: flex-start;
+    padding-bottom: 12.8rem;
+
+    @include respond(tab-port) {
+      background-image: none;
+      background-color: $color-gray-dark;
+      padding-bottom: 6.4rem;
+    }
+
+    @include respond(phone) {
+      background-image: url('../../img/musicdb/polygon2-mobile.svg');
+      background-color: $color-white;
+      background-size: 100%;
+      padding: 9.6rem 4.8rem 0 4.8rem;
+      min-height: 750px;
+    }
+
+    @include respond(sm-phone) {
+      padding: 6.4rem 4.8rem 0 4.8rem;
+      min-height: 600px;
+    }
+  }
+
+  &__left--features,
+  &__right--features {
+    padding: 0 6.4rem;
+    margin-top: 9.6rem;
+    @include respond(tab-land) {
+      padding: 0;
+      margin-top: 3.2rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 0;
+    }
+  }
+
+  &__left--features {
+    width: 35vw;
+    @include respond(phone) {
+      width: auto;
+    }
+  }
+
+  &__right--features {
+    @include respond(tab-port) {
+      padding-left: 4.8rem;
+    }
+    @include respond(phone) {
+      padding-left: 0;
+    }
+  }
+
+  &--video {
+    display: block;
+    text-align: center;
+
+    @include respond(big-desktop) {
+      padding: 9.6rem 6.4rem;
+    }
+
+    @include respond(phone) {
+      padding: 6.4rem 0;
+    }
+  }
+}
+
+.intro-img {
+  height: 75vh;
+  max-height: 600px;
+  margin-right: 3.2rem;
+  margin-left: 3.2rem;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.design-img {
+  height: 70vh;
+  max-height: 500px;
+  width: auto;
+
+  @include respond(big-desktop) {
+    height: 60vh;
+    width: auto;
+  }
+
+  @include respond(tab-land) {
+    height: auto;
+    width: 25vw;
+    margin-top: 6.4rem;
+  }
+
+  @include respond(tab-port) {
+    height: auto;
+    width: 30vw;
+  }
+
+  @include respond(phone) {
+    height: 50vh;
+    width: auto;
+    box-shadow: 0 1rem 3rem rgba($color-gray-dark, 0.3);
+  }
+}
+
+.schema-img {
+  margin-top: 6.4rem;
+  width: 60%;
+  @include respond(tab-port) {
+    width: 90%;
+  }
+}
+
+.mdb-video {
+  width: 80vw;
+  max-width: 100rem;
+  @include respond(phone) {
+    width: 90vw;
+  }
+}

@@ -1,0 +1,89 @@
+@import '../base.scss';
+
+.api-section {
+  font-size: 2rem;
+  line-height: 1.6;
+  padding-left: 19.2rem;
+
+  @include respond(tab-land) {
+    padding: 0 12.8rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 3.2rem;
+  }
+
+  &--header {
+    background-color: $color-gray-dark;
+    color: $color-white;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 65vh, 0 100%);
+  }
+
+  &--about {
+    max-width: 70rem;
+    @include respond(tab-land) {
+      max-width: auto;
+    }
+
+    & p {
+      margin-top: 6.4rem;
+    }
+  }
+
+  &--projects {
+    padding-bottom: 12.8rem;
+  }
+}
+
+.api-header {
+  @include centerAbsoluteVertical;
+}
+
+.api-ul {
+  list-style-type: none;
+}
+.api-li:first-child {
+  margin-top: 0.8rem;
+}
+.api-link {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-primary-red;
+  }
+}
+
+.api-project {
+  display: flex;
+  flex-direction: row;
+  max-width: 90rem;
+  margin-top: 3.6rem;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    max-width: auto;
+  }
+
+  &__header {
+    min-width: 38.4rem;
+    @include respond(tab-port) {
+      min-width: auto;
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: $color-gray-dark;
+    }
+    &:hover {
+      color: $color-gray-light;
+    }
+  }
+}

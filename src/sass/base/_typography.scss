@@ -1,0 +1,160 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $color-gray-dark;
+}
+
+.heading-primary {
+  font-size: 6.4rem;
+  letter-spacing: 0.04em;
+
+  @include respond(phone) {
+    font-size: 5.2rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  color: $color-gray-light;
+  @include respond(phone) {
+    font-size: 3rem;
+    margin-top: 1.6rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  margin-top: 3.2rem;
+  color: $color-gray-dark-2;
+}
+
+.heading-projects {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+  color: $color-gray-light;
+}
+
+.mdb-heading {
+  &--primary {
+    font-family: "Nunito", sans-serif;
+    font-size: 3.6rem;
+    margin-top: 4.8rem;
+  }
+  &--secondary {
+    font-family: "Nunito", sans-serif;
+    font-size: 3rem;
+    margin-top: 1.2rem;
+    color: $color-gray-light;
+  }
+  &--tertiary {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    &--white {
+      color: $color-white;
+    }
+  }
+}
+
+.mdb-section__p {
+  font-size: 2.4rem;
+  margin-top: 2.4rem;
+  line-height: 1.3em;
+  & a {
+    color: $color-gray-dark;
+  }
+  &--white {
+    color: $color-white;
+    & a {
+      color: $color-white;
+    }
+  }
+}
+
+.mdb-section__ul {
+  list-style-position: outside;
+  margin-left: 3.2rem;
+  margin-top: 1.2rem;
+  & li {
+    margin-top: 0.8rem;
+  }
+}
+
+.recipe-heading {
+  &--primary {
+    font-size: 3.6rem;
+    margin-bottom: 4.8rem;
+    line-height: 1.6;
+    @include respond(phone) {
+      margin: 6.4rem 2.4rem 6.4rem 2.4rem;
+    }
+  }
+}
+
+.recipe-p {
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.contact__header {
+  &--primary {
+    font-size: 6.4rem;
+  }
+  &--secondary {
+    font-size: 2.4rem;
+    margin-top: 3.6rem;
+    line-height: 1.6;
+  }
+}
+
+.portfolio-heading {
+  margin-left: -12.8rem;
+  margin-bottom: 2.4rem;
+  color: $color-primary-blue;
+
+  @include respond(tab-land) {
+    margin-left: 0rem;
+  }
+
+  &--primary {
+    color: $color-primary-red;
+  }
+  &--gradient {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.portfolio-p {
+  margin-top: 2.4rem;
+
+  &:first-of-type {
+    @include respond(tab-land) {
+      margin-top: 6.4rem;
+    }
+  }
+}
+
+.api-heading {
+  &--primary {
+    font-size: 3.6rem;
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+  &--secondary {
+    letter-spacing: 0.03em;
+    font-size: 2.4rem;
+    margin: 3.6rem 0;
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.api-p {
+  margin-top: 2.4rem;
+}

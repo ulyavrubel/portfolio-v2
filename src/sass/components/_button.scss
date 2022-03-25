@@ -1,0 +1,140 @@
+.gradient-box {
+  display: inline-block;
+  position: relative;
+  padding: 1.2rem 1.6rem;
+  background: $color-white;
+  background-clip: padding-box;
+  border: solid 1px transparent;
+  border-radius: 15rem;
+  margin-top: 3.2rem;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(
+      to right bottom,
+      $color-primary-blue,
+      $color-primary-red
+    );
+  }
+
+  &:hover .btn {
+    display: inline-block;
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-blue 50%,
+      $color-primary-red
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-primary-blue;
+    font-size: 1.4rem;
+    transition: all 0.3s;
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &__project {
+    &,
+    &:link,
+    &:visited {
+      font-size: 1.6rem;
+      font-weight: 600;
+      padding: 0.8rem 2.4rem;
+      border-radius: 2rem;
+      transition: all 0.2s;
+      position: relative;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+        padding: 1.2rem 3.2rem;
+      }
+
+      @include respond(big-desktop) {
+        font-size: 2rem;
+        padding: 1.2rem 3.2rem;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+
+    &--mdb {
+      &,
+      &:link,
+      &:visited {
+        font-family: "Nunito", sans-serif;
+        background-color: $color-gray-dark;
+        color: $color-white;
+      }
+      &:hover {
+        background-color: $color-gray-dark-2;
+      }
+    }
+
+    &--recipe {
+      &,
+      &:link,
+      &:visited {
+        background-color: $color-white;
+        color: $color-primary-blue;
+      }
+      &:hover {
+        color: $color-primary-red;
+      }
+    }
+
+    &--api {
+      &,
+      &:link,
+      &:visited {
+        background-color: $color-white;
+        color: $color-gray-dark;
+      }
+      &:hover {
+        color: $color-gray-light;
+      }
+    }
+
+    &--portfolio {
+      &,
+      &:link,
+      &:visited {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-red,
+          $color-primary-blue
+        );
+        color: $color-white;
+        margin-left: -12.8rem;
+        transition: all 0.4s;
+
+        @include respond(tab-land) {
+          margin-left: 0rem;
+        }
+      }
+      &:hover {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

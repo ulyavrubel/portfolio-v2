@@ -1,0 +1,177 @@
+.footer {
+  height: 4.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 6.4rem;
+  padding-right: 6.4rem;
+
+  @include respond(phone) {
+    display: block;
+  }
+
+  &__par {
+    color: $color-gray-light;
+    font-size: 1.2rem;
+    @include respond(phone) {
+      text-align: center;
+    }
+
+    &--home {
+      @include respond(phone) {
+        padding-bottom: 12.8rem;
+      }
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-primary-red;
+    }
+    &:hover {
+      font-weight: 500;
+    }
+
+    &--white {
+      &,
+      &:link,
+      &:visited {
+        color: $color-white;
+      }
+    }
+  }
+
+  &__icons {
+    @include respond(phone) {
+      text-align: center;
+      margin: 4.8rem 0 2.4rem 0;
+    }
+    // &--home {
+    //   @include respond(phone) {
+    //     margin: 0 0 2.4rem 0;
+    //   }
+    // }
+  }
+
+  &__icon-link {
+    &:not(:last-child) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  &__icon {
+    transition: all 0.3s;
+
+    &--white {
+      filter: brightness(0) invert(1);
+    }
+    &:hover {
+      // https://codepen.io/sosuke/pen/Pjoqqp
+      filter: invert(32%) sepia(18%) saturate(6547%) hue-rotate(339deg)
+        brightness(111%) contrast(102%);
+    }
+  }
+}
+
+.wide-footer {
+  background-color: $color-gray-dark;
+  padding: 6.4rem;
+  @include respond(phone) {
+    padding-bottom: 4.8rem;
+  }
+
+  &__list {
+    margin: 3.2rem 0 6.4rem 0;
+    & li {
+      &:not(:first-child) {
+        margin-top: 1.2rem;
+      }
+    }
+    &--nav {
+      margin-top: 0;
+      @include respond(phone) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__heading span {
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__heading::after {
+    @include respond(phone) {
+      content: ">>";
+    }
+  }
+
+  &__link {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: $color-white;
+    transition: all 0.4s;
+
+    @include respond(phone) {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      margin-left: 2.4rem;
+    }
+  }
+
+  &__navigation-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-white;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    transition: all 0.4s;
+
+    &:hover {
+      margin-right: 2.4rem;
+    }
+  }
+}
+
+.ft-section {
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @include respond(phone) {
+    padding: 6.4rem 4.8rem;
+    display: block;
+  }
+
+  &__left,
+  &__right {
+    width: 50vw;
+
+    @include respond(phone) {
+      width: auto;
+    }
+  }
+
+  &--footer {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  &__left--footer {
+    @include respond(phone) {
+      position: relative;
+    }
+  }
+
+  &__right--footer {
+    text-align: right;
+  }
+}
