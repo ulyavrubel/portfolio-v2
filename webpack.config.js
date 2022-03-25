@@ -43,6 +43,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true
     },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Ulyana Sichkar',
@@ -58,7 +63,6 @@ module.exports = {
             chunks: [name],
             favicon: './src/img/icon.png'
         }))
-        ,
     ],
     module: {
         rules: [
@@ -77,10 +81,7 @@ module.exports = {
                         ],
                         urlFilter: (attribute, value) => {
                             if (attribute == 'href') {
-                                if (/\.pdf$/.test(value)) {
-                                    return true;
-                                }
-                                return false;
+                                return /\.pdf$/.test(value);
                             }
 
                             return true;
@@ -90,7 +91,11 @@ module.exports = {
             },
             {
                 test: /\.(scss|sass)$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ],
             },
             {
                 test: /\.css$/i,
